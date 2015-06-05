@@ -1,0 +1,2670 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title> Introduction to Compressive Sensing </title>
+<script src="Introduction%20to%20Compressive%20Sensing_files/ga.js" async="" type="text/javascript"></script><script src="Introduction%20to%20Compressive%20Sensing_files/puzlet.js"></script><script src="Introduction%20to%20Compressive%20Sensing_files/jquery_002.js" type="text/javascript"></script><script src="Introduction%20to%20Compressive%20Sensing_files/google_analytics.js" type="text/javascript"></script><link href="Introduction%20to%20Compressive%20Sensing_files/jquery-ui.css" rel="stylesheet" type="text/css"><script src="Introduction%20to%20Compressive%20Sensing_files/wiky.js" type="text/javascript"></script><link href="Introduction%20to%20Compressive%20Sensing_files/coffeelab.css" rel="stylesheet" type="text/css"><style data-url="main.css" type="text/css">#left_col {
+   float:left;
+   width:450px;
+}
+#right_col {
+   float:right;
+   width:450px;
+}
+
+#clear {
+ clear:both;
+}
+ 
+#text {
+    width: 960px;
+    margin: 0 auto;
+}
+ 
+#menu1 {
+    width: 960px;
+    margin: 0px;
+}
+ 
+#text1 {
+    left: 10px;
+    top: 0;
+}
+ 
+#text2 {
+    left: 710px;
+    top: 0;
+}
+ 
+#text3 {
+    left: 10px;
+    top: 205px;
+}
+ 
+#text4 {
+    left: 710px;
+    top: 170px;
+}
+ 
+#text5 {
+    left: 170px;
+    top: 440px;
+    width: 600px;
+    text-align: center;
+}
+ 
+#slider {
+    position: absolute;
+    width: 500px;
+    height: 10px;
+    bottom: 80px;
+    left: 230px;
+    background: white;
+}
+ 
+#slider2 {
+    position: absolute;
+    width: 500px;
+    height: 10px;
+    bottom: 80px;
+    left: 230px;
+    background: white;
+}
+ 
+#slider3 {
+    position: absolute;
+    width: 500px;
+    height: 10px;
+    bottom: 100px;
+    left: 230px;
+    background: white;
+}
+ 
+path {
+    stroke: steelblue;
+    stroke-width: 1;
+    fill: none;
+}
+ 
+.axis path,
+.axis line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+ 
+.axis text {
+    font-family: sans-serif;
+    font-size: 14px;
+}
+ 
+#alias_graph {
+    position: absolute;
+    width: 400px;
+    top: 50px;
+    left: 250px;
+}
+ 
+#alias_graph2 {
+    position: absolute;
+    width: 400px;
+    top: 50px;
+    left: 250px;
+}
+ 
+#l1_bar {
+    position: absolute;
+    width: 120px;
+    top: 10px;
+    left: 600px;
+}
+ 
+#l2_bar {
+    position: absolute;
+    width: 120px;
+    top: 10px;
+    left: 600px;
+}
+ 
+#graph_container {
+    position: relative;
+    width: 960px;
+    height: 500px;
+    margin: 0px;
+    z-index: 10;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+}
+
+#graph_container2 {
+    position: relative;
+    width: 960px;
+    height: 500px;
+    margin: 0px;
+    z-index: 10;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+}
+
+.graph_text {
+    position: absolute;
+    width: 220px;
+    padding: 5px;
+    text-align: left;
+    opacity: 0.7;
+    background: white;
+    border-radius: 5px;
+}
+ 
+#func {
+    position: absolute;
+    width: 140px; /* 300px; */
+    top: 50px; /*50px;*/
+    left: 320px; /*320px;*/
+    background: white;
+    opacity: 0.8;
+    z-index: -10;
+    table-layout: fixed;
+}
+ 
+#func2 {
+    position: absolute;
+    width: 140px; /* 300px; */
+    top: 50px; /*50px;*/
+    left: 320px; /*320px;*/
+    background: white;
+    opacity: 0.8;
+    z-index: -10;
+    table-layout: fixed;
+}
+ 
+.func td {
+    width: 65px;
+    text-align: left; 
+    vertical-align: bottom;
+}
+ 
+.func2 td {
+    width: 65px;
+    text-align: left; 
+    vertical-align: bottom;
+}
+ 
+.firstcharacter {
+    float: left; 
+    color: #903;
+    width: 35px;
+    font-size: 60px; /* 75 */
+    line-height: 60px;
+    padding-top: 4px;
+    padding-right: 8px;
+    padding-left: 3px; 
+    font-family: Georgia; 
+}
+ 
+#sparse1 {
+    cursor: pointer;
+    border-bottom: 1px dotted green;
+}
+
+#graph2 {
+   display: none;
+}</style><style data-url="main2.css" type="text/css">#left_col {
+   float:left;
+   width:450px;
+}
+#right_col {
+   float:right;
+   width:450px;
+}
+
+#clear {
+ clear:both;
+}
+ 
+#text {
+    width: 960px;
+    margin: 0 auto;
+}
+ 
+#menu1 {
+    width: 960px;
+    margin: 0px;
+}
+ 
+#text1 {
+    left: 10px;
+    top: 0;
+}
+ 
+#text2 {
+    left: 710px;
+    top: 0;
+}
+ 
+#text3 {
+    left: 10px;
+    top: 205px;
+}
+ 
+#text4 {
+    left: 710px;
+    top: 170px;
+}
+ 
+#text5 {
+    left: 170px;
+    top: 440px;
+    width: 600px;
+    text-align: center;
+}
+ 
+#slider {
+    position: absolute;
+    width: 500px;
+    height: 10px;
+    bottom: 80px;
+    left: 230px;
+    background: white;
+}
+ 
+#slider2 {
+    position: absolute;
+    width: 500px;
+    height: 10px;
+    bottom: 80px;
+    left: 230px;
+    background: white;
+}
+ 
+#slider3 {
+    position: absolute;
+    width: 500px;
+    height: 10px;
+    bottom: 100px;
+    left: 230px;
+    background: white;
+}
+ 
+path {
+    stroke: steelblue;
+    stroke-width: 1;
+    fill: none;
+}
+ 
+.axis path,
+.axis line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+ 
+.axis text {
+    font-family: sans-serif;
+    font-size: 14px;
+}
+ 
+#alias_graph {
+    position: absolute;
+    width: 400px;
+    top: 50px;
+    left: 250px;
+}
+ 
+#alias_graph2 {
+    position: absolute;
+    width: 400px;
+    top: 50px;
+    left: 250px;
+}
+ 
+#l1_bar {
+    position: absolute;
+    width: 120px;
+    top: 10px;
+    left: 600px;
+}
+ 
+#l2_bar {
+    position: absolute;
+    width: 120px;
+    top: 10px;
+    left: 600px;
+}
+ 
+#graph_container {
+    position: relative;
+    width: 960px;
+    height: 500px;
+    margin: 0px;
+    z-index: 10;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+}
+
+#graph_container2 {
+    position: relative;
+    width: 960px;
+    height: 500px;
+    margin: 0px;
+    z-index: 10;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+}
+
+.graph_text {
+    position: absolute;
+    width: 220px;
+    padding: 5px;
+    text-align: left;
+    opacity: 0.7;
+    background: white;
+    border-radius: 5px;
+}
+ 
+#func {
+    position: absolute;
+    width: 140px; /* 300px; */
+    top: 50px; /*50px;*/
+    left: 320px; /*320px;*/
+    background: white;
+    opacity: 0.8;
+    z-index: -10;
+    table-layout: fixed;
+}
+ 
+#func2 {
+    position: absolute;
+    width: 140px; /* 300px; */
+    top: 50px; /*50px;*/
+    left: 320px; /*320px;*/
+    background: white;
+    opacity: 0.8;
+    z-index: -10;
+    table-layout: fixed;
+}
+ 
+.func td {
+    width: 65px;
+    text-align: left; 
+    vertical-align: bottom;
+}
+ 
+.func2 td {
+    width: 65px;
+    text-align: left; 
+    vertical-align: bottom;
+}
+ 
+.firstcharacter {
+    float: left; 
+    color: #903;
+    width: 35px;
+    font-size: 60px; /* 75 */
+    line-height: 60px;
+    padding-top: 4px;
+    padding-right: 8px;
+    padding-left: 3px; 
+    font-family: Georgia; 
+}
+ 
+#sparse1 {
+    cursor: pointer;
+    border-bottom: 1px dotted green;
+}
+
+#graph2 {
+   display: none;
+}</style><script src="Introduction%20to%20Compressive%20Sensing_files/coffeescript.js" type="text/javascript"></script><script src="Introduction%20to%20Compressive%20Sensing_files/acorn.js" type="text/javascript"></script><script src="Introduction%20to%20Compressive%20Sensing_files/numeric-1.js" type="text/javascript"></script><script src="Introduction%20to%20Compressive%20Sensing_files/jquery.js" type="text/javascript"></script><script src="Introduction%20to%20Compressive%20Sensing_files/compile.js" type="text/javascript"></script><script src="Introduction%20to%20Compressive%20Sensing_files/jquery_003.js" type="text/javascript"></script><script src="Introduction%20to%20Compressive%20Sensing_files/jquery-ui.js" type="text/javascript"></script><script src="Introduction%20to%20Compressive%20Sensing_files/d3.js" type="text/javascript"></script><script data-url="dropdown.js" type="text/javascript">$("#3samples").click(function(){
+	$("#graph1").show()
+	$("#graph2").hide()
+	$("#menu1").text("3 Samples")
+})
+
+$("#2samples").click(function(){
+	$("#graph2").show()
+	$("#graph1").hide()
+	$("#menu1").text("2 Samples")
+})
+
+</script><script data-url="https://api.github.com/repos/metormote/iopctrl/contents/iopctrl.js" type="text/javascript">iopctrl = function() {
+    var iopctrl = {
+        version: "0.0.2"
+    };
+    
+    function iopctrl_local_coordinate(element, x, y) {
+        var svgRoot = element.ownerSVGElement;
+        var p =  svgRoot.createSVGPoint();
+        //adjust for scroll offset on mobile devices
+        if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
+            p.x = x + (window.pageXOffset ? window.pageXOffset : 0);
+            p.y = y + (window.pageYOffset ? window.pageYOffset : 0);
+        }
+        else {
+            p.x = x;
+            p.y = y;
+        }
+        //handle polymer issue
+        var ctm = element.impl ? element.impl.getScreenCTM() : element.getScreenCTM();
+        //alert(JSON.stringify(ctm, null, 4));
+        return p.matrixTransform(ctm.inverse());
+    }
+    
+    iopctrl.LedButton = function() {
+    
+    };
+    
+    
+    iopctrl.led = function() {
+        var width = 20, height = 10, round = 2, on = true, colorOn = d3.rgb("lightgreen"), colorOff = colorOn.darker(2), transitionDuration = 100;
+        var _ledUpdate;
+        
+        function led(g)
+        {
+            g.each(function() {
+                var g = d3.select(this);
+
+                var led = g.selectAll("rect").data([ 0 ])
+                    , ledUpdate = (led.enter().append("rect")
+                        .attr("class", on ? "on" : "off")
+                        .attr("width", width)
+                        .attr("height", height)
+                        .attr("rx", round)
+                        .style("fill", on ? colorOn : colorOff), d3.transition(led))
+                    ledExit = d3.transition(led.exit()).style("opacity", 1e-6).remove();
+                _ledUpdate = ledUpdate;
+            });
+        }
+        led.on = function(x) {
+            if (!arguments.length) return on;
+            on = x;
+            if(_ledUpdate) {
+                _ledUpdate.transition()
+                    .duration(transitionDuration)
+                    .attr("class", on ? "on" : "off")
+                    .style("fill", on ? colorOn : colorOff);
+            }
+            return led;
+        };
+        led.width = function(x) {
+            if (!arguments.length) return width;
+            width = x;
+            return led;
+        };
+        led.height = function(x) {
+            if (!arguments.length) return height;
+            height = x;
+            return led;
+        };
+        led.round = function(x) {
+            if (!arguments.length) return round;
+            round = x;
+            return led;
+        };
+        led.color = function(x) {
+            if (!arguments.length) return colorOn;
+            colorOn = d3.rgb(x);
+            colorOff = colorOn.darker(2);
+            return led;
+        };
+        led.transitionDuration = function(x) {
+            if (!arguments.length) return transitionDuration;
+            transitionDuration = x;
+            return led;
+        };
+        return led;
+    };
+    
+    iopctrl.ledarray = function() {
+        var width = 20, count = 16, padding = 4, vertical = true;
+        var value;
+        var scale = d3.scale.linear()
+            .range([200, 0]);
+        var thresholds = d3.scale.threshold()
+            .domain([0.5, 0.8])
+            .range(["lightgreen", "yellow", "red"]);
+        var _ledarrayUpdate, _h;
+        
+        function ledarray(g)
+        {
+            g.each(function() {
+                var g = d3.select(this);
+                var extent = iopctrl_scaleExtent(scale);
+                var e = extent[1] - extent[0];
+                var range = scale.range();
+                var r = range[1] - range[0];
+                var delta = r / count;
+                _h = (e - padding * (count - 1)) / count;
+                var data = d3.range(r < 0 ? range[0] - _h : range[0], r < 0 ? range[1] - _h : range[1], delta);
+                
+                var ledarray = g.selectAll(".led").data(data)
+                    , ledarrayUpdate = (ledarray.enter().append("g"), d3.transition(ledarray))
+                    , ledarrayExit = d3.transition(ledarray.exit()).style("opacity", 1e-6).remove();
+
+                ledarrayUpdate.each(function(d, i) {
+                    var g = d3.select(this);
+                    var inv = scale.invert(d);
+                    var c = thresholds(inv);
+                    this._led = iopctrl.led().width(width).height(_h).color(c);
+                    g.attr("class", "led").attr("transform", "translate(0,"+ d +")");
+                    g.call(this._led);
+                });
+                _ledarrayUpdate = ledarrayUpdate;
+            });
+        }
+        ledarray.value = function(x) {
+            if (!arguments.length) return value;
+            value = x;
+            var r = scale(x);
+            var inv = (scale.range()[1] - scale.range()[0]) < 0;
+            _ledarrayUpdate.each(function(d, i) { if((!inv && r > d) || (inv && r < (d + _h))) this._led.on(true)});
+            _ledarrayUpdate.reverse().each(function(d, i) { if((!inv && r <= d) || (inv && r >= (d + _h))) this._led.on(false)});
+            return ledarray;
+        };
+        ledarray.thresholds = function(x) {
+            if (!arguments.length) return thresholds;
+            thresholds = x;
+            return ledarray;
+        };
+        ledarray.scale = function(x) {
+            if (!arguments.length) return scale;
+            scale = x;
+            return ledarray;
+        };
+        ledarray.width = function(x) {
+            if (!arguments.length) return width;
+            width = x;
+            return ledarray;
+        };
+        ledarray.count = function(x) {
+            if (!arguments.length) return count;
+            count = x;
+            return ledarray;
+        };
+        ledarray.padding = function(x) {
+            if (!arguments.length) return padding;
+            padding = x;
+            return ledarray;
+        };
+        return ledarray;
+    };
+    
+    iopctrl.slider = function() {
+        var width = 50, minEventInterval = 100, enableFlick = true, transitionDuration = 500, events = true, moveToTouch = true, ease = "cubic-out"; 
+        var margin = {"top": 20, "left": 20, "bottom": 20, "right": 20};
+        var axis = d3.svg.axis()
+            .orient("bottom")
+            .scale(d3.scale.linear()
+                .range([0, 500]));
+        var bands = [];
+        var _cursorUpdate, _pointerUpdate;
+        var _range, _invert, _vertical, _lastEvent, _currentValue, _currentPoint, _slide, _deltaX = 0, _deltaY = 0, _lastPos = {};
+        var _onValueChanged;
+        var _indicator;
+        
+        function slider(g)
+        {
+            _range = iopctrl_scaleRange(axis.scale());
+            _invert = _range[0] > _range[1] ? true : false;
+            _vertical = axis.orient() == "left" || axis.orient() == "right";
+            
+            g.each(function() {
+                var g = d3.select(this);
+                
+                g.on("pointerleave", function(){_slide=false; return false;})
+                    .on("pointerup", function(){_slide=false; return false;});
+                
+                var bar = g.selectAll(".bar").data([ 0 ])
+                    , barUpdate = (bar.enter().append("g").attr("class", "bar"), d3.transition(bar));
+
+                barUpdate.attr("transform", "translate(" + (margin.left) + ", " + (margin.top) + ")");
+
+                var x = _vertical ? 0 : _range[0]
+                    , y = _vertical ? _range[0] : 0
+                    , w = _vertical ? width : _range[1] - _range[0]
+                    , h = _vertical ? _range[1] - _range[0] : width;
+
+                x = (w < 0 ? x + w : x);
+                y = (h < 0 ? y + h : y);
+                w = Math.abs(w);
+                h = Math.abs(h);
+                
+                barUpdate.append("rect")
+                    .attr("class", "lane")
+                    .attr("x", x)
+                    .attr("y", y)
+                    .attr("width", w)
+                    .attr("height", h);
+
+                barUpdate.append("rect")
+                    .attr("class", "cursor")
+                    .attr("x", x)
+                    .attr("y", y)
+                    .attr("width", w)
+                    .attr("height", h);
+                
+                _cursorUpdate = barUpdate.selectAll(".cursor");
+                
+                
+                var b = g.selectAll(".band").data(bands)
+                    , bandsUpdate = (b.enter().append("g").attr("class", "band"), d3.transition(b))
+                    , bandsExit = d3.transition(b.exit()).style("opacity", 1e-6).remove();
+                
+                bandsUpdate.attr("transform", "translate(" + margin.left + ", " + margin.top + ")")
+                    .each(function(band) {
+                        var x = iopctrl_convert(axis.scale(), band.domain[0])
+                            , y = band.span[0] * width
+                            , w = iopctrl_convert(axis.scale(), band.domain[1]) - iopctrl_convert(axis.scale(), band.domain[0])
+                            , h = band.span[1] * width - band.span[0] * width;
+                        
+                        x = (w < 0 ? x + w : x);
+                        y = (h < 0 ? y + h : y);
+                        w = Math.abs(w);
+                        h = Math.abs(h);
+                        d3.select(this).append("rect")
+                                .attr("class", band.class)
+                                .attr("x", _vertical ?  y : x)
+                                .attr("y", _vertical ?  x : y)
+                                .attr("width", _vertical ? h  : w)
+                                .attr("height", _vertical ?  w : h)
+                    });
+                
+                
+                var a = g.selectAll(".axis").data([ 0 ])
+                    , axisUpdate = (a.enter().append("g").attr("class", "axis"), d3.transition(a));
+
+                axisUpdate.attr("class", "axis")
+                    .attr("transform", "translate(" + ((axis.orient() == "right" ? width : 0) + margin.left) + ", " + ((axis.orient() == "bottom" ? width : 0) + margin.top) + ")")
+                    .call(axis);
+
+                var indicator = g.selectAll(".indicator").data([ 0 ])
+                    , indicatorUpdate = (indicator.enter().append("g").attr("class", "indicator"), d3.transition(indicator));
+                
+                _pointerUpdate=indicatorUpdate.attr("transform", "translate(" + margin.left + ", " + margin.top + ")")
+                    .append("g")
+                    .attr("class", "pointer")
+                    .attr("transform", "translate(0, 0)");
+
+                if(undefined != _indicator) {
+                    _pointerUpdate.call(_indicator, width)
+                }
+
+                var touch = g.selectAll(".touch").data([ 0 ])
+                    , touchUpdate = (touch.enter().append("g").attr("class", "touch"), d3.transition(touch));
+
+                if(events) {
+                    touchUpdate.attr("transform", "translate(" + margin.left + ", " + margin.top + ")")
+                        .append("rect")
+                        .attr("x", _vertical ? x : x - margin.left)
+                        .attr("y", _vertical ? y - margin.top : y)
+                        .attr("width", _vertical ? width : w + margin.top + margin.bottom)
+                        .attr("height", _vertical ? h + margin.right + margin.left : width)
+                        .style("opacity", 0).call(addEvents);
+                }
+                else {
+                    touchUpdate.remove();
+                }
+                redraw(iopctrl_invert(axis.scale(), _range[0]));
+                
+            });
+        }
+
+        function addEvents(g, start, end)
+        {
+            g.on("selectstart", function() {
+                    d3.event.stopPropagation();
+                    d3.event.preventDefault();
+                    return false;})
+                .on("pointerdown", function() {
+                    var x = d3.event.clientX, y = d3.event.clientY;
+                    var coord = iopctrl_local_coordinate(this, x, y);
+                    var pos = pointToPos(coord.x, coord.y);
+                    var p = (_vertical ? pos.y : pos.x);
+                    if(moveToTouch) {
+                        redraw(pointToValue(p), transitionDuration);
+                    }
+                    _slide=true;
+                    _deltaX = 0; _deltaY = 0;
+                    return false;})
+                .on("pointerup", function() {
+                    _deltaX = 0; _deltaY = 0;
+                    _slide=false;
+                    return false;})
+                .on("pointermove", function() {
+                    if(!_slide) return false;
+                    var x = d3.event.clientX, y = d3.event.clientY;
+                    var coord = iopctrl_local_coordinate(this, x, y);
+                    var pos = pointToPos(coord.x, coord.y);
+                    var min, max, p;
+                    if(moveToTouch) {
+                        p = (_vertical ? pos.y : pos.x);
+                        if(_slide) redraw(pointToValue(p), 200);
+                    }
+                    else {
+                        p = _currentPoint + (_vertical ?  pos.deltaY : pos.deltaX);
+                        if(_slide) redraw(pointToValue(p), axis.scale().rangeBand ? transitionDuration : 25);
+                    }
+                    return false;})
+                .on("flick", function() {
+                    if(enableFlick) {
+                        var flickVelocity = d3.event.velocity;
+                        var flickAngle = d3.event.angle * Math.PI / 180;
+                        var projection = _vertical ?  Math.sin(flickAngle) : Math.cos(flickAngle);
+                        var p = _currentPoint + Math.abs(_range[1] - _range[0]) * projection * flickVelocity * 0.5;
+                        redraw(pointToValue(p), 1000);
+                        _slide=false;
+                        return false;
+                    }
+                    return true;});
+        }
+        
+        function redraw(value, td)
+        {
+            if(value == _currentValue) return;
+
+            _deltaX = 0; _deltaY = 0;
+            var point = iopctrl_convert(axis.scale(), value);
+            
+            _cursorUpdate.transition()
+                .duration(td)
+                .delay(0)
+                .ease(ease)
+                .attrTween(_vertical ? "height" : "width", function() {
+
+                    var startPoint = undefined != _currentPoint ? _currentPoint : _range[0];
+                    
+                    return function(step) {
+                        _currentPoint = startPoint + (point - startPoint) * step;
+                        _currentValue = iopctrl_invert(axis.scale(), _currentPoint);
+
+                        var now = new Date().getTime();
+                        if(_onValueChanged && (step==1 || _lastEvent + minEventInterval < now)) {
+                            _onValueChanged(_currentValue, step==1);
+                            _lastEvent=now;
+                        }
+
+                        _pointerUpdate.attr("transform", "translate(" + (_vertical ? 0 : _currentPoint) + ", "+(_vertical ? _currentPoint : 0)+") rotate(" + (_vertical ? 90 : 0) + ")");
+
+                        var l = _currentPoint - _range[0];
+                        _cursorUpdate.attr(_vertical ? "y" : "x", l < 0 ? _range[0] + l : _range[0]);
+                        return Math.abs(l);
+                    }
+                });
+        }
+
+        slider.value = function(value) {
+            if (!arguments.length) return _currentValue;
+            redraw(value);
+            return slider;
+        };
+        slider.scale = function(x) {
+            if (!arguments.length) return axis.scale();
+            axis.scale(x);
+            return slider;
+        };
+        slider.axis = function(x) {
+            if (!arguments.length) return axis;
+            axis = x;
+            return slider;
+        };
+        slider.bands = function(x) {
+            if (!arguments.length) return bands;
+            bands = x;
+            return slider;
+        };
+        slider.width = function(x) {
+            if (!arguments.length) return width;
+            width = x;
+            return slider;
+        };
+        slider.transitionDuration = function(x) {
+            if (!arguments.length) return transitionDuration;
+            transitionDuration = x;
+            return slider;
+        };
+        slider.ease = function(x) {
+            if (!arguments.length) return ease;
+            ease = x;
+            return slider;
+        };
+        slider.indicator = function(x) {
+            if (!arguments.length) return _indicator;
+            _indicator = x;
+            return slider;
+        };
+        slider.moveToTouch = function(x) {
+            if (!arguments.length) return moveToTouch;
+            moveToTouch = x;
+            return slider;
+        };
+        slider.events = function(x) {
+            if (!arguments.length) return events;
+            events = x;
+            return slider;
+        };
+        slider.onValueChanged = function(x) {
+            if (!arguments.length) return _onValueChanged;
+            _onValueChanged = x;
+            return slider;
+        };
+        function pointToPos(x, y)
+        {
+            _deltaX += x - (_lastPos.x || x);
+            _deltaY += y - (_lastPos.y || y);
+            _lastPos = {"x": x, "y": y, "deltaX": _deltaX, "deltaY": _deltaY};
+            return _lastPos;
+        }
+        function pointToValue(p) {
+            var min = ((!_invert && p < _range[0]) || (_invert && p > _range[0]));
+            var max = ((!_invert && p > _range[1]) || (_invert && p < _range[1]));
+            return iopctrl_invert(axis.scale(), min ? _range[0] : max ? _range[1] : p);
+        }
+        return slider;
+    };
+    iopctrl.defaultSliderIndicator = function(g, w) {
+        g.append("line")
+            .attr("y1", -w/2)
+            .attr("y2", w/4)
+            .style("stroke", "red")
+            .style("stroke-width", 2);
+            
+    };
+
+
+
+
+    iopctrl.arcslider = function()
+    {
+        var radius = 100, minEventInterval = 100, enableFlick = true, transitionDuration = 500, arcFactor = 0.5, events = true, moveToTouch = true, ease = "cubic-out";
+        var margin = {"top": 50, "left": 50, "bottom": 50, "right": 50};
+        var axis = iopctrl.arcaxis()
+            .scale(d3.scale.linear()
+                .range([- 3* Math.PI / 4, 3* Math.PI / 4]))
+            .orient("out")
+            .outerRadius(radius)
+            .innerRadius(radius);
+        var bands = [];
+        var _range, _extent, _invert, _comp, _indicator, _cursorArc, _pointerUpdate, _cursorUpdate;
+        var _slide, _currentValue, _currentRad, _lastEvent, _onValueChanged, _lastAngle, _delta = 0;
+        
+        function arcslider(g)
+        {
+            _range = iopctrl_scaleRange(axis.scale());
+            _extent = iopctrl_scaleExtent(axis.scale());
+            _invert = (_range[0] > _range[1]) ? true : false;
+            _comp = 2*Math.PI - Math.abs(_range[1] - _range[0]);
+            _comp < 0 ? 0 : _comp;
+
+            g.each(function() {
+                var g = d3.select(this);
+
+                g.on("pointerleave", function(){_slide=false; return false;})
+                    .on("pointerup", function(){_slide=false; return false;});
+
+                var arc = g.selectAll(".arc").data([ 0 ])
+                    , arcUpdate = (arc.enter().append("g").attr("class", "arc"), d3.transition(arc));
+
+                arcUpdate.attr("transform", "translate(" + (radius + margin.left) + ", " + (radius + margin.top) + ")");
+                
+                arcUpdate.append("path")
+                    .attr("class", "lane")
+                    .attr("d", d3.svg.arc()
+                        .startAngle(_extent[0])
+                        .endAngle(_extent[1])
+                        .innerRadius(arcFactor * radius)
+                        .outerRadius(radius));
+
+                _cursorArc = d3.svg.arc()
+                    .startAngle(_range[0])
+                    .endAngle(_range[1])
+                    .innerRadius(arcFactor * radius)
+                    .outerRadius(radius);
+
+                arcUpdate.append("path")
+                    .attr("class", "cursor")
+                    .attr("d", _cursorArc);
+                
+                _cursorUpdate = arcUpdate.selectAll(".cursor");
+
+
+                var b = g.selectAll(".band").data(bands)
+                    , bandsUpdate = (b.enter().append("g").attr("class", "band"), d3.transition(b))
+                    , bandsExit = d3.transition(b.exit()).style("opacity", 1e-6).remove();
+
+                bandsUpdate.attr("transform", "translate(" + (radius + margin.left) + ", " + (radius + margin.top) + ")")
+                    .each(function(band) {d3.select(this).append("path")
+                                .attr("class", band.class)
+                                .attr("d", d3.svg.arc()
+                                            .startAngle(iopctrl_convert(axis.scale(), band.domain[0]))
+                                            .endAngle(iopctrl_convert(axis.scale(), band.domain[1]))
+                                            .innerRadius(band.span[0] * radius)
+                                            .outerRadius(band.span[1] * radius))});
+
+                var a = g.selectAll(".axis").data([ 0 ])
+                    , axisUpdate = (a.enter().append("g").attr("class", "axis"), d3.transition(a));
+
+                axisUpdate.attr("transform", "translate(" + (radius + margin.left) + ", " + (radius + margin.top) + ")")
+                    .call(axis);
+
+                var indicator = g.selectAll(".indicator").data([ 0 ])
+                    , indicatorUpdate = (indicator.enter().append("g").attr("class", "indicator"), d3.transition(indicator));
+
+                _pointerUpdate=indicatorUpdate.attr("transform", "translate(" + (radius + margin.left) + ", " + (radius + margin.top) + ")")
+                    .append("g")
+                    .attr("class", "pointer")
+                    .attr("transform", "rotate("+ 180 * _range[0] / Math.PI +")");
+                
+                if(undefined != _indicator) {
+                    _pointerUpdate.call(_indicator, radius)
+                }
+                    
+                var touch = g.selectAll(".touch").data([ 0 ])
+                    , touchUpdate = (touch.enter().append("g").attr("class", "touch"), d3.transition(touch));
+                
+                if(events) {
+                    touchUpdate.attr("transform", "translate(" + (radius + margin.left) + ", " + (radius + margin.top) + ")")
+                        .append("circle").attr("r", radius).style("opacity", 0).call(addEvents);
+                }
+                else {
+                    touchUpdate.remove();
+                }
+                redraw(iopctrl_invert(axis.scale(), _range[0]));
+            });
+        }
+
+        function addEvents(g)
+        {
+            g.on("selectstart", function() {
+                d3.event.stopPropagation();
+                d3.event.preventDefault();
+                return false;
+            })
+            .on("pointerdown", function() {
+                var x = d3.event.clientX, y = d3.event.clientY;
+                var coord = iopctrl_local_coordinate(this, x, y);
+                //alert("x="+x + ": y=" + y + " cx=" + coord.x + " cy=" + coord.y);
+                var rc = pointToRad(coord.x, coord.y, false);
+                var omega = rc.omega;
+                var iz = _invert ?  (omega < _range[0] + _comp / 8) && (omega > _range[1] - _comp / 8) : (omega > _range[0] - _comp / 8) && (omega < _range[1] + _comp / 8);
+                if(rc.r > arcFactor*radius && iz) {
+                    if(moveToTouch) redraw(radToValue(omega), transitionDuration);
+                    _slide=true;
+                }
+                _delta=0;
+                return false;})
+            .on("pointerup", function() {
+                _delta=0;
+                _slide=false;
+                return false;})
+            .on("pointermove", function() {
+                if(!_slide) return false;
+                var x = d3.event.clientX, y = d3.event.clientY;
+                var coord = iopctrl_local_coordinate(this, x, y);
+                var rc = pointToRad(coord.x, coord.y, true);
+                var omega;
+                if(moveToTouch) {
+                    omega = rc.omega;
+                    var iz = _invert ?  (omega < _range[0] + _comp / 8) && (omega > _range[1] - _comp / 8) : (omega > _range[0] - _comp / 8) && (omega < _range[1] + _comp / 8);
+                    if(rc.r > 0.25*radius && iz) {
+                        redraw(radToValue(omega), 200);
+                    }
+                }
+                else {
+                    omega = _currentRad + rc.delta;
+                    if(rc.r > arcFactor*radius) {
+                        redraw(radToValue(omega), axis.scale().rangeBand ? transitionDuration : 25);
+                    }
+                }
+                return false;})
+            .on("flick", function() {
+                if(enableFlick) {
+                    var flickVelocity = d3.event.velocity;
+                    var flickAngle = d3.event.angle * Math.PI / 180;
+                    var projection = Math.cos(flickAngle) * Math.cos(_lastAngle) + Math.sin(flickAngle) * Math.sin(_lastAngle);
+                    var rad = _currentRad + Math.abs(_range[1] - _range[0]) * projection * flickVelocity * 0.5;
+                    redraw(radToValue(rad), 1000);
+                    _slide=false;
+                    return false;
+                }
+                return true;});
+        }
+        
+        function redraw(value, td)
+        {
+            if(value == _currentValue) return;
+            _delta = 0;
+
+            var rad = iopctrl_convert(axis.scale(), value);
+            var startRad = (typeof _currentRad == "undefined" || isNaN(_currentRad)) ?  _range[0] : _currentRad;
+            
+            _cursorUpdate.transition()
+                .duration(td)
+                .delay(0)
+                .ease(ease)
+                .attrTween("d", function() {
+                    
+                    return function(step) {
+                        _currentRad = startRad + (rad - startRad) * step;
+                        _currentValue = iopctrl_invert(axis.scale(), _currentRad);
+                        
+                        var now = new Date().getTime();
+                        if(_onValueChanged && (step==1 || (_lastEvent || 0) + minEventInterval < now)) {
+                            _onValueChanged(_currentValue, step==1);
+                            _lastEvent=now;
+                        }
+                        
+                        if(_comp != 0) {
+                            _pointerUpdate.attr("transform", "rotate(" + 180 * _currentRad / Math.PI + ")");
+                        }
+                        return _cursorArc.endAngle(_currentRad)();
+                    }
+                })
+                .each(function() {
+                    if(_comp == 0) {
+                        d3.transition(_pointerUpdate)
+                            .duration(td)
+                            .delay(0)
+                            .ease(ease)
+                            .attr("transform", "rotate(" + 180 * rad / Math.PI + ")");
+                    }
+                });
+        }
+
+        arcslider.value = function(x) {
+            if (!arguments.length) return _currentValue;
+            redraw(x, transitionDuration);
+            return arcslider;
+        };
+        arcslider.scale = function(x) {
+            if (!arguments.length) return axis.scale();
+            axis.scale(x);
+            return arcslider;
+        };
+        arcslider.axis = function(x) {
+            if (!arguments.length) return axis;
+            axis = x;
+            return arcslider;
+        };
+        arcslider.bands = function(x) {
+            if (!arguments.length) return bands;
+            bands = x;
+            return arcslider;
+        };
+        arcslider.radius = function(x) {
+            if (!arguments.length) return radius;
+            radius = x;
+            axis.outerRadius(x);
+            axis.innerRadius(x);
+            return arcslider;
+        };
+        arcslider.arcFactor = function(x) {
+            if (!arguments.length) return arcFactor;
+            arcFactor = x;
+            return arcslider;
+        };
+        arcslider.moveToTouch = function(x) {
+            if (!arguments.length) return moveToTouch;
+            moveToTouch = x;
+            return arcslider;
+        };
+        arcslider.transitionDuration = function(x) {
+            if (!arguments.length) return transitionDuration;
+            transitionDuration = x;
+            return arcslider;
+        };
+        arcslider.ease = function(x) {
+            if (!arguments.length) return ease;
+            ease = x;
+            return arcslider;
+        };
+        arcslider.indicator = function(x) {
+            if (!arguments.length) return _indicator;
+            _indicator = x;
+            return arcslider;
+        };
+        arcslider.events = function(x) {
+            if (!arguments.length) return events;
+            events = x;
+            return arcslider;
+        };
+        arcslider.onValueChanged = function(x) {
+            if (!arguments.length) return _onValueChanged;
+            _onValueChanged = x;
+            return arcslider;
+        };
+        function pointToRad(x, y, cont) {
+            var r = Math.sqrt(x * x + y * y);
+            var omega = Math.atan2(x, -y);
+            
+            if(_invert) {
+                if(omega - 2*Math.PI > (_range[1] - _comp / 2)) omega -= 2*Math.PI;
+                else if(omega + 2*Math.PI < (_range[0] + _comp / 2)) omega += 2*Math.PI;
+            }
+            else {
+                if(omega - 2*Math.PI > (_range[0] - _comp / 2)) omega -= 2*Math.PI;
+                else if(omega + 2*Math.PI < (_range[1] + _comp / 2)) omega += 2*Math.PI;
+            }
+            
+            if(cont && _comp > 0) {
+                if(omega - _lastAngle < -Math.PI) omega += 2*Math.PI;
+                else if(omega - _lastAngle > Math.PI) omega -= 2*Math.PI;
+            }
+            _delta += omega - (_lastAngle || omega);
+            _lastAngle = omega;    
+            return {"r": r, "omega": omega, "delta": _delta};
+        }
+        function radToValue(omega) {
+            var min = ((!_invert && omega < _range[0]) || (_invert && omega > _range[0]));
+            var max = ((!_invert && omega > _range[1]) || (_invert && omega < _range[1]));
+            return iopctrl_invert(axis.scale(), min ? _range[0] : max ? _range[1] : omega);
+        }
+        return arcslider;
+    };
+    iopctrl.defaultArcSliderIndicator = function(g, r) {
+        //g.append("circle").attr("r", 0.95 * r).attr("class", "knob");
+        g.append("path").attr("d", "M0 " + -0.7 * r + " L 0 " + -0.98 * r + "");
+    };
+    iopctrl.defaultGaugeIndicator = function(g, r) {
+        g.append("path").attr("d", "M0 " + 0.2 * r + " L 0 " + -1.05 * r + "");
+        g.append("circle").attr("r", 0.03 * r);
+    };
+    
+    iopctrl.segdisplay = function() {
+        var width=50, digitCount = 1, decimals = 0, negative = false, gap = 130;
+        var value, digits = [0];
+        var _scale;
+        var _dispUpdate;
+        
+        function segdisplay(g)
+        {
+            g.each(function() {
+                var g = d3.select(this);
+
+                _scale = width / (gap * digitCount +  50);
+                //var height= 200 * _scale;
+                
+                var disp = g.selectAll(".digit").data(digits);
+                _dispUpdate = (disp.enter().append("g").attr("class", "digit"), d3.transition(disp));
+
+                _dispUpdate.attr("transform", function(d, i) { return "translate(" + (width - gap * _scale * i-80 * _scale) + ", " + (20 * _scale) + ")";})
+                    .call(drawDigit, _scale);
+
+            })
+            
+        }
+        
+        function drawDigit(element, scale) {
+            var ll = 40 * scale;
+            var aa = 10 * scale;
+            var bb = 10 * scale;
+            var cc = 2 * scale;
+            var rr = 10 * scale;
+            var a = drawSegment(element, 0, 0, ll, aa, bb, cc, 0);
+            var b = drawSegment(element, 35 * scale, 42 * scale, ll, aa, bb, -cc, 100);
+            var c = drawSegment(element, 21 * scale, 126 * scale, ll, aa, bb, -cc, 100);
+            var d = drawSegment(element, -28 * scale, 168 * scale, ll, aa, bb, cc, 0);
+            var e = drawSegment(element, -62 * scale, 126 * scale, ll, aa, bb, -cc, 100);
+            var f = drawSegment(element, -48 * scale, 42 * scale, ll, aa, bb, -cc, 100);
+            var g = drawSegment(element, -14 * scale, 84 * scale, ll, aa, bb, cc, 0);
+            var dot = element.append("circle")
+                .attr("cx", 32 * scale)
+                .attr("cy", 175 * scale)
+                .attr("r", rr)
+                .attr("class", "off")
+                .style("stroke", "none");
+            return [a, b, c, d, e, f, g, dot];
+        }
+        
+        function drawSegment(e, cx, cy, l, a, b, c, angle) {
+            return e.append("path")
+                .attr("d", "M" + (cx + l) + " " + cy + "L" + (cx + l - a + c) + " " + (cy - b) + "L" + (cx - l + a + c) + " " + (cy - b) + "L" + (cx - l) + " " + (cy) + "L" + (cx - l + a - c) + " " + (cy + b) + "L" + (cx + l - a - c) + " " + (cy + b))
+                .attr("transform", function() { return "rotate("+angle+" "+cx+" "+cy+")"})
+                .attr("class", "off")
+                .style("stroke", "none");
+        }
+        
+        function litDigit(digit, val, dot) {
+            var cond = [];
+            switch (val) {
+                case 1:
+                    cond = [0, 1, 1, 0, 0, 0, 0];
+                    break;
+                case 2:
+                    cond = [1, 1, 0, 1, 1, 0, 1];
+                    break;
+                case 3:
+                    cond = [1, 1, 1, 1, 0, 0, 1];
+                    break;
+                case 4:
+                    cond = [0, 1, 1, 0, 0, 1, 1];
+                    break;
+                case 5:
+                    cond = [1, 0, 1, 1, 0, 1, 1];
+                    break;
+                case 6:
+                    cond = [1, 0, 1, 1, 1, 1, 1];
+                    break;
+                case 7:
+                    cond = [1, 1, 1, 0, 0, 0, 0];
+                    break;
+                case 8:
+                    cond = [1, 1, 1, 1, 1, 1, 1];
+                    break;
+                case 9:
+                    cond = [1, 1, 1, 1, 0, 1, 1];
+                    break;
+                case 0:
+                    cond = [1, 1, 1, 1, 1, 1, 0];
+                    break;
+                case 10:
+                    cond = [0, 0, 0, 0, 0, 0, 1];
+                    break;
+                default:
+                    cond = [0, 0, 0, 0, 0, 0, 0];
+            }
+            
+            digit.selectAll("*").each(function(d, i) {
+                d3.select(this).attr("class", (i < 7 && cond[i]) || (i==7 && dot) ? "on" : "off");
+            });
+            
+        }
+        segdisplay.value = function (val) {
+            if (!arguments.length) return value;
+            value = val;
+            
+            var v = Math.round(Math.abs(val) * Math.pow(10, decimals));
+            _dispUpdate.each(function(d, i) {
+                var g = d3.select(this);
+                
+                if(!negative && val<0) {
+                    digits[i] = -1;
+                    litDigit(g, 10, false);
+                    return;
+                }
+
+                digits[i]=v % 10;
+                litDigit(g, digits[i], (i == decimals));
+                if (v < 10 && i >= decimals) {
+                    if(negative && v == -1 && val < 0 && i > decimals) {
+                        digits[i] = -1;
+                        litDigit(g, 10, false);
+                        val=-val;
+                    }
+                    else {
+                        v=-1;
+                    }
+                }
+                else {
+                    v = Math.floor(v / 10);
+                }
+            });
+            return segdisplay;
+        };
+        segdisplay.digitCount = function(x) {
+            if (!arguments.length) return digitCount;
+            digitCount = x;
+            digits = new Array(digitCount);
+            for(var i=0;i<digitCount;i++) digits[i]=0;
+            return segdisplay;
+        };
+        segdisplay.decimals = function(x) {
+            if (!arguments.length) return decimals;
+            decimals = x;
+            return segdisplay;
+        };
+        segdisplay.width = function(x) {
+            if (!arguments.length) return width;
+            width = x;
+            return segdisplay;
+        };
+        segdisplay.negative = function(x) {
+            if (!arguments.length) return negative;
+            negative = x;
+            return segdisplay;
+        };
+        segdisplay.gap = function(x) {
+            if (!arguments.length) return gap;
+            gap = x;
+            return segdisplay;
+        };
+        return segdisplay;
+    };
+    
+    
+    iopctrl.arcaxis = function() {
+        var scale = d3.scale.linear(), outerRadius = 100, innerRadius = 100, orient = "out", tickMajorSize = 6, tickMinorSize = 4, tickEndSize = 6, tickPadding = 3, tickArguments_ = [ 10 ], tickValues = null, tickFormat_, tickSubdivide = 0, normalize = true;
+        function arcaxis(g) {
+            g.each(function() {
+                var g = d3.select(this);
+                var ticks = tickValues == null ? scale.ticks ? scale.ticks.apply(scale, tickArguments_) : scale.domain() : tickValues
+                    , tickFormat = tickFormat_ == null ? scale.tickFormat ? scale.tickFormat.apply(scale, tickArguments_) : String : tickFormat_;
+                ticks = tickArguments_[0]<3 ? d3.extent(ticks) : ticks;
+                
+                var subticks = iopctrl_axisSubdivide(scale, ticks, tickSubdivide)
+                    , subtick = g.selectAll(".tick.minor").data(subticks, String)
+                    , subtickEnter = subtick.enter().insert("line", ".tick").attr("class", "tick minor").style("opacity", 1e-6)
+                    , subtickExit = d3.transition(subtick.exit()).style("opacity", 1e-6).remove()
+                    , subtickUpdate = d3.transition(subtick).style("opacity", 1);
+                
+                var tick = g.selectAll(".tick.major").data(ticks, String)
+                    , tickEnter = tick.enter().insert("g", ".domain").attr("class", "tick major").style("opacity", 1e-6)
+                    , tickExit = d3.transition(tick.exit()).style("opacity", 1e-6).remove()
+                    , tickUpdate = d3.transition(tick).style("opacity", 1), tickTransform;
+                
+                var extent = iopctrl_scaleExtent(scale)
+                    , path = g.selectAll(".domain").data([ 0 ])
+                    , pathUpdate = (path.enter().append("path").attr("class", "domain"), d3.transition(path));
+                
+                var scale1 = scale.copy(), scale0 = this.__chart__ || scale1;
+                this.__chart__ = scale1;
+                tickEnter.append("line");
+                tickEnter.append("text");
+                var lineEnter = tickEnter.select("line")
+                    , lineUpdate = tickUpdate.select("line")
+                    , text = tick.select("text").text(tickFormat)
+                    , textEnter = tickEnter.select("text")
+                    , textUpdate = tickUpdate.select("text")
+                    , textTransform;
+                switch (orient) {
+                    case "out":
+                    {
+                        tickTransform = iopctrl_axis_transform;
+                        subtickEnter.attr("y2", -tickMinorSize);
+                        subtickUpdate.attr("x2", 0).attr("y2", -tickMinorSize);
+                        lineEnter.attr("y2", -tickMajorSize);
+                        lineUpdate.attr("x2", 0).attr("y2", -tickMajorSize);
+                        pathUpdate.attr("d", d3.svg.arc()
+                            .startAngle(extent[0])
+                            .endAngle(extent[1])
+                            .innerRadius(innerRadius)
+                            .outerRadius(outerRadius));
+                        
+                        if(normalize) {
+                            textTransform = iopctrl_text_transform_normalize_out;
+                            textEnter.call(textTransform, scale0, -(Math.max(tickMajorSize, 0) + tickPadding));
+                            textUpdate.call(textTransform, scale1, -(Math.max(tickMajorSize, 0) + tickPadding));
+                            text.attr("class", "unselectable").attr("dy", "0em");
+                        }
+                        else {
+                            textEnter.attr("y", -(Math.max(tickMajorSize, 0) + tickPadding));
+                            textUpdate.attr("x", 0).attr("y", -(Math.max(tickMajorSize, 0) + tickPadding));
+                            text.attr("class", "unselectable").attr("dy", "0em").style("text-anchor", "middle");
+                        }
+
+                        break;
+                    }
+                    case "in":
+                    {
+                        var t = outerRadius - innerRadius;
+                        tickTransform = iopctrl_axis_transform;
+                        subtickEnter.attr("y2", tickMinorSize + t);
+                        subtickUpdate.attr("x2", 0).attr("y2", tickMinorSize + t);
+                        lineEnter.attr("y2", tickMajorSize + t);
+                        lineUpdate.attr("x2", 0).attr("y2", tickMajorSize + t);
+                        pathUpdate.attr("d", d3.svg.arc()
+                            .startAngle(extent[0])
+                            .endAngle(extent[1])
+                            .innerRadius(innerRadius)
+                            .outerRadius(outerRadius));
+
+                        if(normalize) {
+                            textTransform = iopctrl_text_transform_normalize_in;
+                            textEnter.call(textTransform, scale0, (Math.max(tickMajorSize, 0) + tickPadding + t), 0.71);
+                            textUpdate.call(textTransform, scale1, (Math.max(tickMajorSize, 0) + tickPadding + t), 0.71);
+                            text.attr("class", "unselectable");
+                        }
+                        else {
+                            textEnter.attr("y", Math.max(tickMajorSize, 0) + tickPadding + t);
+                            textUpdate.attr("x", 0).attr("y", Math.max(tickMajorSize, 0) + tickPadding + t);
+                            text.attr("class", "unselectable").attr("dy", ".71em").style("text-anchor", "middle");
+                        }
+                        break;
+                    }
+                }
+                
+                var r = outerRadius;
+                if (scale.rangeBand) {
+                    var dx = scale1.rangeBand() / 2, x = function(d) {
+                        return scale1(d) + dx;
+                    };
+                    tickEnter.call(tickTransform, x, r);
+                    tickUpdate.call(tickTransform, x, r);
+                } else {
+                    tickEnter.call(tickTransform, scale0, r);
+                    tickUpdate.call(tickTransform, scale1, r);
+                    tickExit.call(tickTransform, scale1, r);
+                    subtickEnter.call(tickTransform, scale0, r);
+                    subtickUpdate.call(tickTransform, scale1, r);
+                    subtickExit.call(tickTransform, scale1, r);
+                }
+            });
+        }
+        arcaxis.scale = function(x) {
+            if (!arguments.length) return scale;
+            scale = x;
+            return arcaxis;
+        };
+        arcaxis.innerRadius = function(x) {
+            if (!arguments.length) return innerRadius;
+            innerRadius = x;
+            return arcaxis;
+        };
+        arcaxis.outerRadius = function(x) {
+            if (!arguments.length) return outerRadius;
+            outerRadius = x;
+            return arcaxis;
+        };
+        arcaxis.orient = function(x) {
+            if (!arguments.length) return orient;
+            orient = x in iopctrl_axisOrients ? x + "" : iopctrl_axisDefaultOrient;
+            return arcaxis;
+        };
+        arcaxis.ticks = function() {
+            if (!arguments.length) return tickArguments_;
+            tickArguments_ = arguments;
+            return arcaxis;
+        };
+        arcaxis.tickValues = function(x) {
+            if (!arguments.length) return tickValues;
+            tickValues = x;
+            return arcaxis;
+        };
+        arcaxis.tickFormat = function(x) {
+            if (!arguments.length) return tickFormat_;
+            tickFormat_ = x;
+            return arcaxis;
+        };
+        arcaxis.tickSize = function(x, y) {
+            if (!arguments.length) return tickMajorSize;
+            var n = arguments.length - 1;
+            tickMajorSize = +x;
+            tickMinorSize = n > 1 ? +y : tickMajorSize;
+            tickEndSize = n > 0 ? +arguments[n] : tickMajorSize;
+            return arcaxis;
+        };
+        arcaxis.tickPadding = function(x) {
+            if (!arguments.length) return tickPadding;
+            tickPadding = +x;
+            return arcaxis;
+        };
+        arcaxis.tickSubdivide = function(x) {
+            if (!arguments.length) return tickSubdivide;
+            tickSubdivide = +x;
+            return arcaxis;
+        };
+        arcaxis.normalize = function(x) {
+            if (!arguments.length) return normalize;
+            normalize = x;
+            return arcaxis;
+        };
+
+        return arcaxis;
+    };
+    function iopctrl_extent(domain) {
+        var start = domain[0], stop = domain[domain.length - 1];
+        return start < stop ? [ start, stop ] : [ stop, start ];
+    }
+    function iopctrl_scaleExtent(scale) {
+        return scale.rangeExtent ? scale.rangeExtent() : iopctrl_extent(scale.range());
+    }
+    function iopctrl_scaleRange(scale) {
+        var extent = iopctrl_scaleExtent(scale);
+        var range = scale.range();
+        return range[0] < range[range.length - 1] ? [ extent[0], extent[1] ] : [ extent[1], extent[0] ];
+    }
+    function iopctrl_convert(scale, x) {
+        var d = scale(x);
+        isNaN(d) ? d = iopctrl_scaleRange(scale)[0] : d;
+        return scale.rangeBand ? d + scale.rangeBand() / 2 : d;
+    }
+    function iopctrl_invert(scale, x) {
+        if(scale.invert) return scale.invert(x);
+
+        var l = scale.domain().length;
+        var range = iopctrl_scaleRange(scale);
+        var band = (range[1] - range[0]) / l;
+        var index = Math.floor((x - range[0]) / band);
+        return scale.domain()[index < l ? index : l-1];
+
+    }
+    var iopctrl_axisDefaultOrient = "out", iopctrl_axisOrients = {
+        in: 1,
+        out: 1
+    };
+    function iopctrl_axis_transform(selection, x, r) {
+        selection.attr("transform", function(d) {
+            return "translate(" + r * Math.sin(x(d)) + "," + -r * Math.cos(x(d)) + ") rotate("+ 180 / Math.PI * x(d) +")";
+        });
+    }
+    function iopctrl_text_transform_normalize_out(selection, x, dr) {
+        selection.attr("transform", function(d) {
+                var a = x(d) + (x.rangeBand ? x.rangeBand() / 2 : 0);
+                return "rotate("+ -180 / Math.PI * a + ")" + "translate(" + -dr * Math.sin(a) + "," + dr * Math.cos(a) + ")";
+            })
+            .style("text-anchor", function(d) {
+                var a = x(d) + (x.rangeBand ? x.rangeBand() / 2 : 0);
+                a = a < -Math.PI ? a += 2*Math.PI : a > Math.PI ? a -= 2*Math.PI : a;
+                return a > -19*Math.PI/20 && a < -Math.PI/20 ? "end" : a < 19*Math.PI/20 && a > Math.PI/20 ? "start" : "middle";
+            })
+            .style("baseline-shift", function(d) {
+                var a = x(d) + (x.rangeBand ? x.rangeBand() / 2 : 0);
+                return -80 * Math.pow(Math.sin(Math.abs(a/2)), 2) + "%";
+            });
+    }
+    function iopctrl_text_transform_normalize_in(selection, x, dr, em) {
+        selection.attr("transform", function(d) {
+            var a = x(d) + (x.rangeBand ? x.rangeBand() / 2 : 0);
+            return "rotate("+ -180 / Math.PI * a + ")" + "translate(" + -dr * Math.sin(a) + "," + dr * Math.cos(a) + ")";
+            })
+            .style("text-anchor", function(d) {
+                var a = x(d) + (x.rangeBand ? x.rangeBand() / 2 : 0);
+                a = a < -Math.PI ? a += 2*Math.PI : a > Math.PI ? a -= 2*Math.PI : a;
+                return a > -7*Math.PI/8 && a < -Math.PI/8 ? "start" : a < 7*Math.PI/8 && a > Math.PI/8 ? "end" : "middle";
+            })
+             .style("baseline-shift", function(d) {
+                var a = x(d) + (x.rangeBand ? x.rangeBand() / 2 : 0);
+                return -100 * Math.pow(Math.cos(Math.abs(a/2)), 3) + "%";
+            });
+    }
+    function iopctrl_axisSubdivide(scale, ticks, m) {
+        subticks = [];
+        if (m && ticks.length > 1) {
+            var extent = iopctrl_extent(scale.domain()), subticks, i = -1, n = ticks.length, d = (ticks[1] - ticks[0]) / ++m, j, v;
+            while (++i < n) {
+                for (j = m; --j > 0; ) {
+                    if ((v = +ticks[i] - j * d) >= extent[0]) {
+                        subticks.push(v);
+                    }
+                }
+            }
+            for (--i, j = 0; ++j < m && (v = +ticks[i] + j * d) < extent[1]; ) {
+                subticks.push(v);
+            }
+        }
+        return subticks;
+    }
+    
+    return iopctrl;
+}();
+
+
+
+
+</script><script data-url="main.coffee" type="text/javascript">(function() {
+  var Alias, Bar, L1Bar, N, abs, acos, alias, animate, asin, atan, atan2, bar, ceil, colors, complex, computeAll, conj, cos, eplot, exp, f, f_coeff, f_text, figure, floor, height, id, j, k, l1Bar, linspace, log, m, max, nm, pi, plot, plotSeries, pow, print, rand, round, sin, size, sqrt, tan, tmax, tmin, width, __isMain__, _i, _len, _ref;
+
+  __isMain__ = true;
+
+  nm = numeric;
+
+  size = nm.size;
+
+  max = nm.max;
+
+  abs = nm.abs;
+
+  pow = nm.pow;
+
+  sqrt = nm.sqrt;
+
+  exp = nm.exp;
+
+  log = nm.log;
+
+  sin = nm.sin;
+
+  cos = nm.cos;
+
+  tan = nm.tan;
+
+  asin = nm.asin;
+
+  acos = nm.acos;
+
+  atan = nm.atan;
+
+  atan2 = nm.atan2;
+
+  ceil = nm.ceil;
+
+  floor = nm.floor;
+
+  round = nm.round;
+
+  rand = nm.rand;
+
+  complex = nm.complex;
+
+  conj = nm.conj;
+
+  linspace = nm.linspace;
+
+  print = nm.print;
+
+  plot = nm.plot;
+
+  plotSeries = nm.plotSeries;
+
+  eplot = nm.plot;
+
+  figure = nm.figure;
+
+  pi = Math.PI;
+
+  j = complex(0, 1);
+
+  print.clear();
+
+  eplot.clear();
+
+  _ref = ["func", "alias_graph", "l1_bar"];
+  for (_i = 0, _len = _ref.length; _$_(_i, "<", _len); _i++) {
+    id = _ref[_i];
+    $(_$_("#", "+", id)).empty();
+  }
+
+  abs = function(z) {
+    var k, _j, _ref1, _results;
+    _results = [];
+    for (k = _j = 0, _ref1 = z.length; _$_(0, "<=", _ref1) ? _$_(_j, "<", _ref1) : _$_(_j, ">", _ref1); k = _$_(0, "<=", _ref1) ? ++_j : --_j) {
+      _results.push(Math.abs(z[k]));
+    }
+    return _results;
+  };
+
+  m = [20, 20, 20, 80];
+
+  width = _$_(_$_(400, "-", m[1]), "-", m[3]);
+
+  height = _$_(_$_(300, "-", m[0]), "-", m[2]);
+
+  N = 20;
+
+  tmin = -2;
+
+  tmax = 3;
+
+  colors = ["red", "blue", "green", "purple"];
+
+  f_coeff = function(k) {
+    return [k, _$_(k, "-", 5 / 12), _$_(_$_(-7, "/", 8), "-", _$_(k, "/", 4)), _$_(37 / 24, "-", _$_(k, "/", 4))];
+  };
+
+  f = function(t, k) {
+    var z;
+    return z = f_coeff(k).dot([1, t, _$_(t, "*", t), _$_(_$_(t, "*", t), "*", t)]);
+  };
+
+  f_text = function(k) {
+    var a, b, p, s, tr;
+    p = f_coeff(k);
+    a = function(n) {
+      return _$_(Math.round(_$_(100, "*", p[n])), "/", 100);
+    };
+    b = function(n) {
+      return _$_(Math.round(_$_(100, "*", p[n])), "/", 100);
+    };
+    s = function(n) {
+      return _$_(_$_(_$_(_$_("<span style='color: ", "+", colors[n]), "+", "'>"), "+", (a(n))), "+", "</span>");
+    };
+    tr = function(td1, td2) {
+      return _$_(_$_(_$_(_$_("<tr><td style='text-align:right;'>", "+", td1), "+", "</td><td>"), "+", td2), "+", "</td><tr/>");
+    };
+    return _$_(_$_(_$_(_$_(_$_(_$_(_$_(_$_("<table class='func'>\n", "+", (tr("f(t) = ", s(0)))), "+", "\n"), "+", (tr("+", _$_(s(1), "+", "t")))), "+", "\n"), "+", (tr("+", _$_(s(2), "+", "t<sup>2</sup>")))), "+", "\n"), "+", (tr("+", _$_(s(3), "+", "t<sup>3</sup>")))), "+", "\n\n</table>");
+  };
+
+  Bar = function(k) {
+    this.margin = {
+      top: 20,
+      right: 30,
+      bottom: 20,
+      left: 50
+    };
+    this.width = _$_(_$_(120, "-", this.margin.left), "-", this.margin.right);
+    this.height = _$_(_$_(300, "-", this.margin.top), "-", this.margin.bottom);
+    this.stack = d3.layout.stack().values(function(d) {
+      return d.values;
+    });
+    this.compute = function(k) {
+      var b;
+      b = function(n, k) {
+        return {
+          key: _$_("Key_", "+", n),
+          values: [
+            {
+              "x": 0,
+              "y": abs(f_coeff(k))[n]
+            }
+          ]
+        };
+      };
+      this.data = [b(3, k), b(2, k), b(1, k), b(0, k)];
+      this.keys = this.data[0].values.map(function(item) {
+        return item.x;
+      });
+      return this.layers = this.stack(this.data);
+    };
+    this.compute(k);
+    return this;
+  };
+
+  Alias = function(k) {
+    var f0, f1, f2, f_axis, f_to_px, fdata, n_to_t, samples, t_axis, t_to_px;
+    t_to_px = d3.scale.linear().domain([tmin, tmax]).range([0, width]);
+    f_to_px = d3.scale.linear().domain([-20, 20]).range([height, 0]);
+    n_to_t = d3.scale.linear().domain([0, N]).range([tmin, tmax]);
+    t_axis = d3.svg.axis().scale(t_to_px).ticks(6);
+    f_axis = d3.svg.axis().scale(f_to_px).orient("left").ticks(6);
+    this.f_data = function(k) {
+      var _j, _results;
+      return (function() {
+        _results = [];
+        for (var _j = 0; _$_(0, "<=", N) ? _$_(_j, "<", N) : _$_(_j, ">", N); _$_(0, "<=", N) ? _j = _$_(_j, "+", 1) : _j = _$_(_j, "-", 1)){ _results.push(_j); }
+        return _results;
+      }).apply(this).map(function(d) {
+        return {
+          tn: n_to_t(d),
+          fn: f(n_to_t(d), k)
+        };
+      });
+    };
+    fdata = this.f_data(k);
+    this.f_svg = d3.svg.line().x(function(d) {
+      return t_to_px(d.tn);
+    }).y(function(d) {
+      return f_to_px(d.fn);
+    });
+    f0 = [t_to_px(-1), f_to_px(f(-1, k))];
+    f1 = [t_to_px(2), f_to_px(f(2, k))];
+    f2 = [t_to_px(-2), f_to_px(f(-2, k))];
+    samples = [f0, f1, f2];
+    this.graph = d3.select("#alias_graph").append("svg").attr("width", _$_(_$_(width, "+", m[1]), "+", m[3])).attr("height", _$_(_$_(height, "+", m[0]), "+", m[2])).append("g").attr("transform", _$_(_$_(_$_(_$_("translate(", "+", m[3]), "+", ","), "+", m[0]), "+", ")"));
+    this.graph.append("g").attr("class", "axis").attr("transform", _$_(_$_("translate(0,", "+", height), "+", ")")).call(t_axis);
+    this.graph.append("g").attr("class", "axis").attr("transform", "translate(-25,0)").call(f_axis);
+    this.graph.append("path").attr("d", this.f_svg(fdata)).attr("id", "poly");
+    this.graph.selectAll("circle").data(samples).enter().append("circle").attr("cx", function(d) {
+      return d[0];
+    }).attr("cy", function(d) {
+      return d[1];
+    }).attr("r", 5);
+    this.compute = function(k) {
+      fdata = this.f_data(k);
+      return this.graph.select("#poly").transition().attr("d", this.f_svg(fdata));
+    };
+    return this;
+  };
+
+  L1Bar = function(bar) {
+    var f_axis, t_axis, x, y;
+    this.svg = d3.select("#l1_bar").append("svg").attr("width", _$_(_$_(bar.width, "+", bar.margin.left), "+", bar.margin.right)).attr("height", _$_(_$_(bar.height, "+", bar.margin.top), "+", bar.margin.bottom)).append("g").attr("transform", _$_(_$_(_$_(_$_("translate(", "+", bar.margin.left), "+", ","), "+", bar.margin.top), "+", ")"));
+    this.layer = this.svg.selectAll(".layer").data(bar.layers).enter().append("g").attr("class", "layer").style("fill", function(d, i) {
+      return colors[_$_(3, "-", i)];
+    });
+    this.x = d3.scale.ordinal().domain(bar.keys).rangeRoundBands([0, bar.width], 0.08);
+    this.y = d3.scale.linear().domain([0, 10]).range([bar.height, 0]);
+    x = this.x;
+    y = this.y;
+    this.layer.selectAll("rect").data(function(d) {
+      return d.values;
+    }).enter().append("rect").attr("fill-opacity", 0.5).attr("stroke", "#000").attr("width", x.rangeBand()).attr("x", function(d) {
+      return d.x;
+    }).attr("y", function(d) {
+      return y(_$_(d.y0, "+", d.y));
+    }).attr("height", function(d) {
+      return _$_(y(d.y0), "-", y(_$_(d.y0, "+", d.y)));
+    });
+    t_axis = d3.svg.axis().scale(x).tickSize(0).tickPadding(6).orient("bottom");
+    f_axis = d3.svg.axis().scale(y).ticks(6).tickSize(0).tickPadding(6).orient("left");
+    this.svg.append("g").attr("class", "axis").call(f_axis);
+    this.compute = function() {
+      this.layer = this.svg.selectAll(".layer").data(bar.layers);
+      y = this.y;
+      return this.layer.selectAll("rect").data(function(d) {
+        return d.values;
+      }).attr("y", function(d) {
+        return y(_$_(d.y0, "+", d.y));
+      }).attr("height", function(d) {
+        return _$_(y(d.y0), "-", y(_$_(d.y0, "+", d.y)));
+      });
+    };
+    return this;
+  };
+
+  k = -1;
+
+  bar = new Bar(k);
+
+  alias = new Alias(k);
+
+  l1Bar = new L1Bar(bar);
+
+  d3.select("#func").html(f_text(k));
+
+  computeAll = function(k) {
+    alias.compute(k);
+    bar.compute(k);
+    l1Bar.compute();
+    return d3.select("#func").html(f_text(k));
+  };
+
+  animate = function(from, to, time) {
+    var run, start, timer;
+    start = new Date().getTime();
+    run = function() {
+      var step;
+      step = Math.min(1, _$_(_$_(new Date().getTime(), "-", start), "/", time));
+      k = _$_(from, "+", _$_(step, "*", _$_(to, "-", from)));
+      computeAll(k);
+      $("#slider").val(k);
+      if (_$_(step, "===", 1)) {
+        return clearInterval(timer);
+      }
+    };
+    return timer = setInterval((function() {
+      return run();
+    }), 100);
+  };
+
+  setTimeout((function() {
+    return animate(-0.9, 2.9, 3000);
+  }), 2800);
+
+  $("#slider").on("change", function() {
+    k = parseFloat(d3.select("#slider").property("value"));
+    return computeAll(k);
+  });
+
+  d3.selectAll("#sparse1").on("click", function() {
+    k = 0;
+    computeAll(k);
+    $("#slider").val(k);
+    return $("#slider").focus();
+  });
+
+}).call(this);
+</script><script data-url="main2.coffee" type="text/javascript">(function() {
+  var Alias, Bar, L2Bar, N, abs, acos, alias, asin, atan, atan2, bar, ceil, colors, complex, computeAll, conj, cos, eplot, exp, f2, f_coeff2, f_text2, figure, floor, height, id, j, k, l, l2Bar, linspace, log, m, max, nm, pi, plot, plotSeries, pow, print, rand, round, sin, size, sqrt, tan, tmax, tmin, width, __isMain__, _i, _len, _ref;
+
+  __isMain__ = true;
+
+  nm = numeric;
+
+  size = nm.size;
+
+  max = nm.max;
+
+  abs = nm.abs;
+
+  pow = nm.pow;
+
+  sqrt = nm.sqrt;
+
+  exp = nm.exp;
+
+  log = nm.log;
+
+  sin = nm.sin;
+
+  cos = nm.cos;
+
+  tan = nm.tan;
+
+  asin = nm.asin;
+
+  acos = nm.acos;
+
+  atan = nm.atan;
+
+  atan2 = nm.atan2;
+
+  ceil = nm.ceil;
+
+  floor = nm.floor;
+
+  round = nm.round;
+
+  rand = nm.rand;
+
+  complex = nm.complex;
+
+  conj = nm.conj;
+
+  linspace = nm.linspace;
+
+  print = nm.print;
+
+  plot = nm.plot;
+
+  plotSeries = nm.plotSeries;
+
+  eplot = nm.plot;
+
+  figure = nm.figure;
+
+  pi = Math.PI;
+
+  j = complex(0, 1);
+
+  print.clear();
+
+  eplot.clear();
+
+  _ref = ["func2", "alias_graph2", "l2_bar"];
+  for (_i = 0, _len = _ref.length; _$_(_i, "<", _len); _i++) {
+    id = _ref[_i];
+    $(_$_("#", "+", id)).empty();
+  }
+
+  abs = function(z) {
+    var k, _j, _ref1, _results;
+    _results = [];
+    for (k = _j = 0, _ref1 = z.length; _$_(0, "<=", _ref1) ? _$_(_j, "<", _ref1) : _$_(_j, ">", _ref1); k = _$_(0, "<=", _ref1) ? ++_j : --_j) {
+      _results.push(Math.abs(z[k]));
+    }
+    return _results;
+  };
+
+  m = [20, 20, 20, 80];
+
+  width = _$_(_$_(400, "-", m[1]), "-", m[3]);
+
+  height = _$_(_$_(300, "-", m[0]), "-", m[2]);
+
+  N = 27;
+
+  tmin = -5;
+
+  tmax = 5;
+
+  colors = ["red", "blue", "green", "purple"];
+
+  f_coeff2 = function(k, l) {
+    return [k, _$_(17 / 4, "-", _$_(4, "*", l)), _$_(_$_(-1, "/", 8), "-", _$_(k, "/", 4)), l];
+  };
+
+  f2 = function(t, k, l) {
+    var z;
+    return z = f_coeff2(k, l).dot([1, t, _$_(t, "*", t), _$_(_$_(t, "*", t), "*", t)]);
+  };
+
+  f_text2 = function(k, l) {
+    var a, b, p, s, tr;
+    p = f_coeff2(k, l);
+    a = function(n) {
+      return _$_(Math.round(_$_(100, "*", p[n])), "/", 100);
+    };
+    b = function(n) {
+      return _$_(Math.round(_$_(100, "*", p[n])), "/", 100);
+    };
+    s = function(n) {
+      return _$_(_$_(_$_(_$_("<span style='color: ", "+", colors[n]), "+", "'>"), "+", (a(n))), "+", "</span>");
+    };
+    tr = function(td1, td2) {
+      return _$_(_$_(_$_(_$_("<tr><td style='text-align:right;'>", "+", td1), "+", "</td><td>"), "+", td2), "+", "</td><tr/>");
+    };
+    return _$_(_$_(_$_(_$_(_$_(_$_(_$_(_$_("<table class='func2'>\n", "+", (tr("f(t) = ", s(0)))), "+", "\n"), "+", (tr("+", _$_(s(1), "+", "t")))), "+", "\n"), "+", (tr("+", _$_(s(2), "+", "t<sup>2</sup>")))), "+", "\n"), "+", (tr("+", _$_(s(3), "+", "t<sup>3</sup>")))), "+", "\n\n</table>");
+  };
+
+  Bar = function(k, l) {
+    this.margin = {
+      top: 20,
+      right: 30,
+      bottom: 20,
+      left: 50
+    };
+    this.width = _$_(_$_(120, "-", this.margin.left), "-", this.margin.right);
+    this.height = _$_(_$_(300, "-", this.margin.top), "-", this.margin.bottom);
+    this.stack = d3.layout.stack().values(function(d) {
+      return d.values;
+    });
+    this.compute = function(k, l) {
+      var b;
+      b = function(n, k, l) {
+        return {
+          key: _$_("Key_", "+", n),
+          values: [
+            {
+              "x": 0,
+              "y": abs(f_coeff2(k, l))[n]
+            }
+          ]
+        };
+      };
+      this.data = [b(3, k, l), b(2, k, l), b(1, k, l), b(0, k, l)];
+      this.keys = this.data[0].values.map(function(item) {
+        return item.x;
+      });
+      return this.layers = this.stack(this.data);
+    };
+    this.compute(k, l);
+    return this;
+  };
+
+  Alias = function(k, l) {
+    var f0, f1, f_axis, f_to_px, fdata2, n_to_t, samples, t_axis, t_to_px;
+    t_to_px = d3.scale.linear().domain([tmin, tmax]).range([0, width]);
+    f_to_px = d3.scale.linear().domain([-20, 20]).range([height, 0]);
+    n_to_t = d3.scale.linear().domain([0, N]).range([tmin, tmax]);
+    t_axis = d3.svg.axis().scale(t_to_px).ticks(6);
+    f_axis = d3.svg.axis().scale(f_to_px).orient("left").ticks(6);
+    this.f_data2 = function(k, l) {
+      var _j, _results;
+      return (function() {
+        _results = [];
+        for (var _j = 0; _$_(0, "<=", N) ? _$_(_j, "<", N) : _$_(_j, ">", N); _$_(0, "<=", N) ? _j = _$_(_j, "+", 1) : _j = _$_(_j, "-", 1)){ _results.push(_j); }
+        return _results;
+      }).apply(this).map(function(d) {
+        return {
+          tn: n_to_t(d),
+          fn: f2(n_to_t(d), k, l)
+        };
+      });
+    };
+    fdata2 = this.f_data2(k, l);
+    this.f_svg = d3.svg.line().x(function(d) {
+      return t_to_px(d.tn);
+    }).y(function(d) {
+      return f_to_px(d.fn);
+    });
+    f0 = [t_to_px(-2), f_to_px(f2(-2, k, l))];
+    f1 = [t_to_px(2), f_to_px(f2(2, k, l))];
+    samples = [f0, f1];
+    this.graph = d3.select("#alias_graph2").append("svg").attr("width", _$_(_$_(width, "+", m[1]), "+", m[3])).attr("height", _$_(_$_(height, "+", m[0]), "+", m[2])).append("g").attr("transform", _$_(_$_(_$_(_$_("translate(", "+", m[3]), "+", ","), "+", m[0]), "+", ")"));
+    this.graph.append("g").attr("class", "axis").attr("transform", _$_(_$_("translate(0,", "+", height), "+", ")")).call(t_axis);
+    this.graph.append("g").attr("class", "axis").attr("transform", "translate(-25,0)").call(f_axis);
+    this.graph.append("path").attr("d", this.f_svg(fdata2)).attr("id", "poly");
+    this.graph.selectAll("circle").data(samples).enter().append("circle").attr("cx", function(d) {
+      return d[0];
+    }).attr("cy", function(d) {
+      return d[1];
+    }).attr("r", 5);
+    this.compute = function(k, l) {
+      fdata2 = this.f_data2(k, l);
+      return this.graph.select("#poly").transition().attr("d", this.f_svg(fdata2));
+    };
+    this;
+    this.compute = function(k, l) {
+      fdata2 = this.f_data2(k, l);
+      return this.graph.select("#poly").transition().attr("d", this.f_svg(fdata2));
+    };
+    return this;
+  };
+
+  L2Bar = function(bar) {
+    var f_axis, t_axis, x, y;
+    this.svg = d3.select("#l2_bar").append("svg").attr("width", _$_(_$_(bar.width, "+", bar.margin.left), "+", bar.margin.right)).attr("height", _$_(_$_(bar.height, "+", bar.margin.top), "+", bar.margin.bottom)).append("g").attr("transform", _$_(_$_(_$_(_$_("translate(", "+", bar.margin.left), "+", ","), "+", bar.margin.top), "+", ")"));
+    this.layer = this.svg.selectAll(".layer").data(bar.layers).enter().append("g").attr("class", "layer").style("fill", function(d, i) {
+      return colors[_$_(3, "-", i)];
+    });
+    this.x = d3.scale.ordinal().domain(bar.keys).rangeRoundBands([0, bar.width], 0.08);
+    this.y = d3.scale.linear().domain([0, 18]).range([bar.height, 0]);
+    x = this.x;
+    y = this.y;
+    this.layer.selectAll("rect").data(function(d) {
+      return d.values;
+    }).enter().append("rect").attr("fill-opacity", 0.5).attr("stroke", "#000").attr("width", x.rangeBand()).attr("x", function(d) {
+      return d.x;
+    }).attr("y", function(d) {
+      return y(_$_(d.y0, "+", d.y));
+    }).attr("height", function(d) {
+      return _$_(y(d.y0), "-", y(_$_(d.y0, "+", d.y)));
+    });
+    t_axis = d3.svg.axis().scale(x).tickSize(0).tickPadding(6).orient("bottom");
+    f_axis = d3.svg.axis().scale(y).ticks(6).tickSize(0).tickPadding(6).orient("left");
+    this.svg.append("g").attr("class", "axis").call(f_axis);
+    this.compute = function() {
+      this.layer = this.svg.selectAll(".layer").data(bar.layers);
+      y = this.y;
+      return this.layer.selectAll("rect").data(function(d) {
+        return d.values;
+      }).attr("y", function(d) {
+        return y(_$_(d.y0, "+", d.y));
+      }).attr("height", function(d) {
+        return _$_(y(d.y0), "-", y(_$_(d.y0, "+", d.y)));
+      });
+    };
+    return this;
+  };
+
+  k = 1;
+
+  l = 1;
+
+  bar = new Bar(k, l);
+
+  alias = new Alias(k, l);
+
+  l2Bar = new L2Bar(bar);
+
+  d3.select("#func2").html(f_text2(k, l));
+
+  computeAll = function(k, l) {
+    alias.compute(k, l);
+    bar.compute(k, l);
+    l2Bar.compute();
+    return d3.select("#func2").html(f_text2(k, l));
+  };
+
+  $("#slider2").on("change", function() {
+    k = parseFloat(d3.select("#slider2").property("value"));
+    l = parseFloat(d3.select("#slider3").property("value"));
+    computeAll(k, l);
+    return $("#slider2").val(k, l);
+  });
+
+  d3.selectAll("#sparse1").on("click", function() {
+    k = 1;
+    l = 1;
+    computeAll(k, l);
+    return $("#slider").focus();
+  });
+
+  $("#slider3").on("change", function() {
+    k = parseFloat(d3.select("#slider2").property("value"));
+    l = parseFloat(d3.select("#slider3").property("value"));
+    return computeAll(k, l);
+  });
+
+  d3.selectAll("#sparse1").on("click", function() {
+    k = 1;
+    l = 1;
+    computeAll(k, l);
+    $("#slider3").val(k, l);
+    return $("#slider3").focus();
+  });
+
+}).call(this);
+</script><script data-url="http://puzlet.org/line-chart/main.coffee" type="text/javascript">(function() {
+  var __isMain__,
+    __hasProp = {}.hasOwnProperty,
+    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+
+  __isMain__ = false;
+
+  $blab.d3Object = (function() {
+    function d3Object(id) {
+      this.element = d3.select("#" + id);
+      this.element.selectAll("svg").remove();
+      this.obj = this.element.append("svg");
+      this.initAxes();
+    }
+
+    d3Object.prototype.append = function(obj) {
+      return this.obj.append(obj);
+    };
+
+    d3Object.prototype.initAxes = function() {};
+
+    return d3Object;
+
+  })();
+
+  $blab.LineChart = (function(_super) {
+    __extends(LineChart, _super);
+
+    function LineChart(spec) {
+      var click, r, _ref, _ref1, _ref2, _ref3, _ref4;
+      this.spec = spec;
+      this.id = this.spec.id;
+      this.container = $("#" + this.id);
+      this.x0 = (_ref = this.spec.x0) != null ? _ref : 100;
+      this.y0 = (_ref1 = this.spec.y0) != null ? _ref1 : 50;
+      this.width = this.container.width() - this.x0 * 2;
+      this.height = this.container.height() - this.y0 * 2;
+      this.xLabel = (_ref2 = this.spec.xLabel) != null ? _ref2 : "";
+      this.yLabel = (_ref3 = this.spec.yLabel) != null ? _ref3 : "";
+      this.background = (_ref4 = this.spec.background) != null ? _ref4 : "#eee";
+      LineChart.__super__.constructor.call(this, this.id);
+      this.line = d3.svg.line().x((function(_this) {
+        return function(d) {
+          return _this.xScale(d.x) + _this.x0;
+        };
+      })(this)).y((function(_this) {
+        return function(d) {
+          return _this.yScale(d.y) + _this.y0;
+        };
+      })(this));
+      r = this.append("rect").attr("width", this.width).attr("height", this.height).style("fill", this.background).attr("transform", "translate(" + this.x0 + ", " + this.y0 + ")");
+      this.append("g").attr("class", "axis").attr("transform", "translate(" + this.x0 + ", " + (this.y0 + this.height) + ")").call(this.xAxis);
+      this.append("text").attr("text-anchor", "center").attr("x", this.x0 + this.width / 2).attr("y", this.y0 + this.height + 40).text(this.xLabel);
+      this.append("g").attr("class", "axis").attr("transform", "translate(" + this.x0 + ", " + this.y0 + ")").call(this.yAxis);
+      this.append("text").attr("text-anchor", "middle").attr("x", this.x0 - 70).attr("y", this.y0 + this.height / 2).text(this.yLabel);
+      if (this.spec.click != null) {
+        click = (function(_this) {
+          return function(coords) {
+            var x, xm, y, ym;
+            xm = coords[0], ym = coords[1];
+            x = _this.xScale.invert(xm);
+            y = _this.yScale.invert(ym);
+            return _this.spec.click(x, y);
+          };
+        })(this);
+        r.on("click", function() {
+          return click(d3.mouse(this));
+        });
+      }
+      this.path = null;
+    }
+
+    LineChart.prototype.clear = function() {
+      return this.obj.selectAll("path").remove();
+    };
+
+    LineChart.prototype.plot = function(x, y, color, hold) {
+      var data, foundNaN, idx, xp, yp, _i, _len;
+      if (color == null) {
+        color = "blue";
+      }
+      if (hold == null) {
+        hold = false;
+      }
+      if (this.path && !hold) {
+        this.path.remove();
+      }
+      data = (function() {
+        var _i, _len, _results;
+        _results = [];
+        for (idx = _i = 0, _len = x.length; _i < _len; idx = ++_i) {
+          xp = x[idx];
+          _results.push({
+            x: x[idx],
+            y: y[idx]
+          });
+        }
+        return _results;
+      })();
+      foundNaN = false;
+      for (_i = 0, _len = y.length; _i < _len; _i++) {
+        yp = y[_i];
+        if (isNaN(yp) || Math.abs(yp) > 1e10) {
+          foundNaN = true;
+        }
+      }
+      if (foundNaN) {
+        return;
+      }
+      return this.path = this.append("path").attr("d", this.line(data)).attr("stroke", color).attr("stroke-width", 2).attr("fill", "none");
+    };
+
+    LineChart.prototype.initAxes = function() {
+      var _ref, _ref1, _ref2, _ref3;
+      this.xScale = d3.scale.linear().domain((_ref = this.spec.xLim) != null ? _ref : [0, 1]).range([0, this.width]);
+      this.xAxis = d3.svg.axis().scale(this.xScale).ticks((_ref1 = this.spec.xTicks) != null ? _ref1 : 10).orient("bottom");
+      this.yScale = d3.scale.linear().domain((_ref2 = this.spec.yLim) != null ? _ref2 : [0, 1]).range([this.height, 0]);
+      return this.yAxis = d3.svg.axis().scale(this.yScale).ticks((_ref3 = this.spec.yTicks) != null ? _ref3 : 10).orient("left");
+    };
+
+    return LineChart;
+
+  })($blab.d3Object);
+
+}).call(this);
+</script><script data-url="http://mathblab.github.io/grand-challenge/arrays.coffee" type="text/javascript">(function() {
+  var abs, acos, asin, atan, atan2, ceil, complex, conj, cos, eplot, exp, figure, floor, j, linspace, log, max, nm, pi, plot, plotSeries, pow, print, rand, round, sin, size, sqrt, tan, x, y, z, __isMain__;
+
+  __isMain__ = false;
+
+  nm = numeric;
+
+  size = nm.size;
+
+  max = nm.max;
+
+  abs = nm.abs;
+
+  pow = nm.pow;
+
+  sqrt = nm.sqrt;
+
+  exp = nm.exp;
+
+  log = nm.log;
+
+  sin = nm.sin;
+
+  cos = nm.cos;
+
+  tan = nm.tan;
+
+  asin = nm.asin;
+
+  acos = nm.acos;
+
+  atan = nm.atan;
+
+  atan2 = nm.atan2;
+
+  ceil = nm.ceil;
+
+  floor = nm.floor;
+
+  round = nm.round;
+
+  rand = nm.rand;
+
+  complex = nm.complex;
+
+  conj = nm.conj;
+
+  linspace = nm.linspace;
+
+  print = nm.print;
+
+  plot = nm.plot;
+
+  plotSeries = nm.plotSeries;
+
+  eplot = nm.plot;
+
+  figure = nm.figure;
+
+  pi = Math.PI;
+
+  j = complex(0, 1);
+
+  print.clear();
+
+  eplot.clear();
+
+  x = [1, 2, 4];
+
+  y = _$_(_$_(2, "*", x), "+", 10);
+
+  z = sqrt(_$_(x, "+", 1));
+
+  x = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+  y = [10, 9, 8, 7, 6, 5];
+
+  z = linspace(-1, 1, 5);
+
+}).call(this);
+</script><script data-url="http://puzlet.org/utility/combnk/combnk.coffee" type="text/javascript">(function() {
+  var abs, acos, asin, atan, atan2, ceil, complex, conj, cos, eplot, exp, figure, floor, j, linspace, log, max, nm, pi, plot, plotSeries, pow, print, rand, round, sin, size, sqrt, tan, __isMain__;
+
+  __isMain__ = false;
+
+  nm = numeric;
+
+  size = nm.size;
+
+  max = nm.max;
+
+  abs = nm.abs;
+
+  pow = nm.pow;
+
+  sqrt = nm.sqrt;
+
+  exp = nm.exp;
+
+  log = nm.log;
+
+  sin = nm.sin;
+
+  cos = nm.cos;
+
+  tan = nm.tan;
+
+  asin = nm.asin;
+
+  acos = nm.acos;
+
+  atan = nm.atan;
+
+  atan2 = nm.atan2;
+
+  ceil = nm.ceil;
+
+  floor = nm.floor;
+
+  round = nm.round;
+
+  rand = nm.rand;
+
+  complex = nm.complex;
+
+  conj = nm.conj;
+
+  linspace = nm.linspace;
+
+  print = nm.print;
+
+  plot = nm.plot;
+
+  plotSeries = nm.plotSeries;
+
+  eplot = nm.plot;
+
+  figure = nm.figure;
+
+  pi = Math.PI;
+
+  j = complex(0, 1);
+
+  print.clear();
+
+  eplot.clear();
+
+  $blab.combnk = function(n, k) {
+    var combo, combos, i;
+    if (_$_(k, "===", 0)) {
+      return [[]];
+    }
+    i = 0;
+    combos = [];
+    combo = [];
+    while (_$_(combo.length, "<", k)) {
+      if (_$_(i, "<", n)) {
+        combo.push(i);
+        i = _$_(i, "+", 1);
+      } else {
+        if (_$_(combo.length, "===", 0)) {
+          break;
+        }
+        i = _$_(combo.pop(), "+", 1);
+      }
+      if (_$_(combo.length, "===", k)) {
+        combos.push(combo.clone());
+        i = _$_(combo.pop(), "+", 1);
+      }
+    }
+    return combos;
+  };
+
+}).call(this);
+</script><script src="Introduction%20to%20Compressive%20Sensing_files/ace.js" type="text/javascript"></script><style id="ace_editor.css">.ace_editor {position: relative;overflow: hidden;font: 12px/normal 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;direction: ltr;}.ace_scroller {position: absolute;overflow: hidden;top: 0;bottom: 0;background-color: inherit;-ms-user-select: none;-moz-user-select: none;-webkit-user-select: none;user-select: none;cursor: text;}.ace_content {position: absolute;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;min-width: 100%;}.ace_dragging .ace_scroller:before{position: absolute;top: 0;left: 0;right: 0;bottom: 0;content: '';background: rgba(250, 250, 250, 0.01);z-index: 1000;}.ace_dragging.ace_dark .ace_scroller:before{background: rgba(0, 0, 0, 0.01);}.ace_selecting, .ace_selecting * {cursor: text !important;}.ace_gutter {position: absolute;overflow : hidden;width: auto;top: 0;bottom: 0;left: 0;cursor: default;z-index: 4;-ms-user-select: none;-moz-user-select: none;-webkit-user-select: none;user-select: none;}.ace_gutter-active-line {position: absolute;left: 0;right: 0;}.ace_scroller.ace_scroll-left {box-shadow: 17px 0 16px -16px rgba(0, 0, 0, 0.4) inset;}.ace_gutter-cell {padding-left: 19px;padding-right: 6px;background-repeat: no-repeat;}.ace_gutter-cell.ace_error {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABOFBMVEX/////////QRswFAb/Ui4wFAYwFAYwFAaWGAfDRymzOSH/PxswFAb/SiUwFAYwFAbUPRvjQiDllog5HhHdRybsTi3/Tyv9Tir+Syj/UC3////XurebMBIwFAb/RSHbPx/gUzfdwL3kzMivKBAwFAbbvbnhPx66NhowFAYwFAaZJg8wFAaxKBDZurf/RB6mMxb/SCMwFAYwFAbxQB3+RB4wFAb/Qhy4Oh+4QifbNRcwFAYwFAYwFAb/QRzdNhgwFAYwFAbav7v/Uy7oaE68MBK5LxLewr/r2NXewLswFAaxJw4wFAbkPRy2PyYwFAaxKhLm1tMwFAazPiQwFAaUGAb/QBrfOx3bvrv/VC/maE4wFAbRPBq6MRO8Qynew8Dp2tjfwb0wFAbx6eju5+by6uns4uH9/f36+vr/GkHjAAAAYnRSTlMAGt+64rnWu/bo8eAA4InH3+DwoN7j4eLi4xP99Nfg4+b+/u9B/eDs1MD1mO7+4PHg2MXa347g7vDizMLN4eG+Pv7i5evs/v79yu7S3/DV7/498Yv24eH+4ufQ3Ozu/v7+y13sRqwAAADLSURBVHjaZc/XDsFgGIBhtDrshlitmk2IrbHFqL2pvXf/+78DPokj7+Fz9qpU/9UXJIlhmPaTaQ6QPaz0mm+5gwkgovcV6GZzd5JtCQwgsxoHOvJO15kleRLAnMgHFIESUEPmawB9ngmelTtipwwfASilxOLyiV5UVUyVAfbG0cCPHig+GBkzAENHS0AstVF6bacZIOzgLmxsHbt2OecNgJC83JERmePUYq8ARGkJx6XtFsdddBQgZE2nPR6CICZhawjA4Fb/chv+399kfR+MMMDGOQAAAABJRU5ErkJggg==");background-repeat: no-repeat;background-position: 2px center;}.ace_gutter-cell.ace_warning {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAmVBMVEX///8AAAD///8AAAAAAABPSzb/5sAAAAB/blH/73z/ulkAAAAAAAD85pkAAAAAAAACAgP/vGz/rkDerGbGrV7/pkQICAf////e0IsAAAD/oED/qTvhrnUAAAD/yHD/njcAAADuv2r/nz//oTj/p064oGf/zHAAAAA9Nir/tFIAAAD/tlTiuWf/tkIAAACynXEAAAAAAAAtIRW7zBpBAAAAM3RSTlMAABR1m7RXO8Ln31Z36zT+neXe5OzooRDfn+TZ4p3h2hTf4t3k3ucyrN1K5+Xaks52Sfs9CXgrAAAAjklEQVR42o3PbQ+CIBQFYEwboPhSYgoYunIqqLn6/z8uYdH8Vmdnu9vz4WwXgN/xTPRD2+sgOcZjsge/whXZgUaYYvT8QnuJaUrjrHUQreGczuEafQCO/SJTufTbroWsPgsllVhq3wJEk2jUSzX3CUEDJC84707djRc5MTAQxoLgupWRwW6UB5fS++NV8AbOZgnsC7BpEAAAAABJRU5ErkJggg==");background-position: 2px center;}.ace_gutter-cell.ace_info {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAAAAAA6mKC9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAJ0Uk5TAAB2k804AAAAPklEQVQY02NgIB68QuO3tiLznjAwpKTgNyDbMegwisCHZUETUZV0ZqOquBpXj2rtnpSJT1AEnnRmL2OgGgAAIKkRQap2htgAAAAASUVORK5CYII=");background-position: 2px center;}.ace_dark .ace_gutter-cell.ace_info {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAJFBMVEUAAAChoaGAgIAqKiq+vr6tra1ZWVmUlJSbm5s8PDxubm56enrdgzg3AAAAAXRSTlMAQObYZgAAAClJREFUeNpjYMAPdsMYHegyJZFQBlsUlMFVCWUYKkAZMxZAGdxlDMQBAG+TBP4B6RyJAAAAAElFTkSuQmCC");}.ace_scrollbar {position: absolute;right: 0;bottom: 0;z-index: 6;}.ace_scrollbar-inner {position: absolute;cursor: text;left: 0;top: 0;}.ace_scrollbar-v{overflow-x: hidden;overflow-y: scroll;top: 0;}.ace_scrollbar-h {overflow-x: scroll;overflow-y: hidden;left: 0;}.ace_print-margin {position: absolute;height: 100%;}.ace_text-input {position: absolute;z-index: 0;width: 0.5em;height: 1em;opacity: 0;background: transparent;-moz-appearance: none;appearance: none;border: none;resize: none;outline: none;overflow: hidden;font: inherit;padding: 0 1px;margin: 0 -1px;text-indent: -1em;-ms-user-select: text;-moz-user-select: text;-webkit-user-select: text;user-select: text;}.ace_text-input.ace_composition {background: inherit;color: inherit;z-index: 1000;opacity: 1;text-indent: 0;}.ace_layer {z-index: 1;position: absolute;overflow: hidden;word-wrap: normal;white-space: pre;height: 100%;width: 100%;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;pointer-events: none;}.ace_gutter-layer {position: relative;width: auto;text-align: right;pointer-events: auto;}.ace_text-layer {font: inherit !important;}.ace_cjk {display: inline-block;text-align: center;}.ace_cursor-layer {z-index: 4;}.ace_cursor {z-index: 4;position: absolute;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;border-left: 2px solid}.ace_slim-cursors .ace_cursor {border-left-width: 1px;}.ace_overwrite-cursors .ace_cursor {border-left-width: 0;border-bottom: 1px solid;}.ace_hidden-cursors .ace_cursor {opacity: 0.2;}.ace_smooth-blinking .ace_cursor {-webkit-transition: opacity 0.18s;transition: opacity 0.18s;}.ace_editor.ace_multiselect .ace_cursor {border-left-width: 1px;}.ace_marker-layer .ace_step, .ace_marker-layer .ace_stack {position: absolute;z-index: 3;}.ace_marker-layer .ace_selection {position: absolute;z-index: 5;}.ace_marker-layer .ace_bracket {position: absolute;z-index: 6;}.ace_marker-layer .ace_active-line {position: absolute;z-index: 2;}.ace_marker-layer .ace_selected-word {position: absolute;z-index: 4;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}.ace_line .ace_fold {-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;display: inline-block;height: 11px;margin-top: -2px;vertical-align: middle;background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII="),url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACJJREFUeNpi+P//fxgTAwPDBxDxD078RSX+YeEyDFMCIMAAI3INmXiwf2YAAAAASUVORK5CYII=");background-repeat: no-repeat, repeat-x;background-position: center center, top left;color: transparent;border: 1px solid black;border-radius: 2px;cursor: pointer;pointer-events: auto;}.ace_dark .ace_fold {}.ace_fold:hover{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII="),url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACBJREFUeNpi+P//fz4TAwPDZxDxD5X4i5fLMEwJgAADAEPVDbjNw87ZAAAAAElFTkSuQmCC");}.ace_tooltip {background-color: #FFF;background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.1));background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.1));border: 1px solid gray;border-radius: 1px;box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);color: black;max-width: 100%;padding: 3px 4px;position: fixed;z-index: 999999;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;cursor: default;white-space: pre;word-wrap: break-word;line-height: normal;font-style: normal;font-weight: normal;letter-spacing: normal;pointer-events: none;}.ace_folding-enabled > .ace_gutter-cell {padding-right: 13px;}.ace_fold-widget {-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;margin: 0 -12px 0 1px;display: none;width: 11px;vertical-align: top;background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42mWKsQ0AMAzC8ixLlrzQjzmBiEjp0A6WwBCSPgKAXoLkqSot7nN3yMwR7pZ32NzpKkVoDBUxKAAAAABJRU5ErkJggg==");background-repeat: no-repeat;background-position: center;border-radius: 3px;border: 1px solid transparent;cursor: pointer;}.ace_folding-enabled .ace_fold-widget {display: inline-block;   }.ace_fold-widget.ace_end {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42m3HwQkAMAhD0YzsRchFKI7sAikeWkrxwScEB0nh5e7KTPWimZki4tYfVbX+MNl4pyZXejUO1QAAAABJRU5ErkJggg==");}.ace_fold-widget.ace_closed {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAGCAYAAAAG5SQMAAAAOUlEQVR42jXKwQkAMAgDwKwqKD4EwQ26sSOkVWjgIIHAzPiCgaqiqnJHZnKICBERHN194O5b9vbLuAVRL+l0YWnZAAAAAElFTkSuQmCCXA==");}.ace_fold-widget:hover {border: 1px solid rgba(0, 0, 0, 0.3);background-color: rgba(255, 255, 255, 0.2);box-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);}.ace_fold-widget:active {border: 1px solid rgba(0, 0, 0, 0.4);background-color: rgba(0, 0, 0, 0.05);box-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);}.ace_dark .ace_fold-widget {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHklEQVQIW2P4//8/AzoGEQ7oGCaLLAhWiSwB146BAQCSTPYocqT0AAAAAElFTkSuQmCC");}.ace_dark .ace_fold-widget.ace_end {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAH0lEQVQIW2P4//8/AxQ7wNjIAjDMgC4AxjCVKBirIAAF0kz2rlhxpAAAAABJRU5ErkJggg==");}.ace_dark .ace_fold-widget.ace_closed {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAFCAYAAACAcVaiAAAAHElEQVQIW2P4//+/AxAzgDADlOOAznHAKgPWAwARji8UIDTfQQAAAABJRU5ErkJggg==");}.ace_dark .ace_fold-widget:hover {box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);background-color: rgba(255, 255, 255, 0.1);}.ace_dark .ace_fold-widget:active {box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);}.ace_fold-widget.ace_invalid {background-color: #FFB4B4;border-color: #DE5555;}.ace_fade-fold-widgets .ace_fold-widget {-webkit-transition: opacity 0.4s ease 0.05s;transition: opacity 0.4s ease 0.05s;opacity: 0;}.ace_fade-fold-widgets:hover .ace_fold-widget {-webkit-transition: opacity 0.05s ease 0.05s;transition: opacity 0.05s ease 0.05s;opacity:1;}.ace_underline {text-decoration: underline;}.ace_bold {font-weight: bold;}.ace_nobold .ace_bold {font-weight: normal;}.ace_italic {font-style: italic;}.ace_error-marker {background-color: rgba(255, 0, 0,0.2);position: absolute;z-index: 9;}.ace_highlight-marker {background-color: rgba(255, 255, 0,0.2);position: absolute;z-index: 8;}</style><style id="ace-tm">.ace-tm .ace_gutter {background: #f0f0f0;color: #333;}.ace-tm .ace_print-margin {width: 1px;background: #e8e8e8;}.ace-tm .ace_fold {background-color: #6B72E6;}.ace-tm {background-color: #FFFFFF;color: black;}.ace-tm .ace_cursor {color: black;}.ace-tm .ace_invisible {color: rgb(191, 191, 191);}.ace-tm .ace_storage,.ace-tm .ace_keyword {color: blue;}.ace-tm .ace_constant {color: rgb(197, 6, 11);}.ace-tm .ace_constant.ace_buildin {color: rgb(88, 72, 246);}.ace-tm .ace_constant.ace_language {color: rgb(88, 92, 246);}.ace-tm .ace_constant.ace_library {color: rgb(6, 150, 14);}.ace-tm .ace_invalid {background-color: rgba(255, 0, 0, 0.1);color: red;}.ace-tm .ace_support.ace_function {color: rgb(60, 76, 114);}.ace-tm .ace_support.ace_constant {color: rgb(6, 150, 14);}.ace-tm .ace_support.ace_type,.ace-tm .ace_support.ace_class {color: rgb(109, 121, 222);}.ace-tm .ace_keyword.ace_operator {color: rgb(104, 118, 135);}.ace-tm .ace_string {color: rgb(3, 106, 7);}.ace-tm .ace_comment {color: rgb(76, 136, 107);}.ace-tm .ace_comment.ace_doc {color: rgb(0, 102, 255);}.ace-tm .ace_comment.ace_doc.ace_tag {color: rgb(128, 159, 191);}.ace-tm .ace_constant.ace_numeric {color: rgb(0, 0, 205);}.ace-tm .ace_variable {color: rgb(49, 132, 149);}.ace-tm .ace_xml-pe {color: rgb(104, 104, 91);}.ace-tm .ace_entity.ace_name.ace_function {color: #0000A2;}.ace-tm .ace_heading {color: rgb(12, 7, 255);}.ace-tm .ace_list {color:rgb(185, 6, 144);}.ace-tm .ace_meta.ace_tag {color:rgb(0, 22, 142);}.ace-tm .ace_string.ace_regex {color: rgb(255, 0, 0)}.ace-tm .ace_marker-layer .ace_selection {background: rgb(181, 213, 255);}.ace-tm.ace_multiselect .ace_selection.ace_start {box-shadow: 0 0 3px 0px white;border-radius: 2px;}.ace-tm .ace_marker-layer .ace_step {background: rgb(252, 255, 0);}.ace-tm .ace_marker-layer .ace_stack {background: rgb(164, 229, 101);}.ace-tm .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgb(192, 192, 192);}.ace-tm .ace_marker-layer .ace_active-line {background: rgba(0, 0, 0, 0.07);}.ace-tm .ace_gutter-active-line {background-color : #dcdcdc;}.ace-tm .ace_marker-layer .ace_selected-word {background: rgb(250, 250, 255);border: 1px solid rgb(200, 200, 250);}.ace-tm .ace_indent-guide {background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAE0lEQVQImWP4////f4bLly//BwAmVgd1/w11/gAAAABJRU5ErkJggg==") right repeat-y;}</style><style>    .error_widget_wrapper {        background: inherit;        color: inherit;        border:none    }    .error_widget {        border-top: solid 2px;        border-bottom: solid 2px;        margin: 5px 0;        padding: 10px 40px;        white-space: pre-wrap;    }    .error_widget.ace_error, .error_widget_arrow.ace_error{        border-color: #ff5a5a    }    .error_widget.ace_warning, .error_widget_arrow.ace_warning{        border-color: #F1D817    }    .error_widget.ace_info, .error_widget_arrow.ace_info{        border-color: #5a5a5a    }    .error_widget.ace_ok, .error_widget_arrow.ace_ok{        border-color: #5aaa5a    }    .error_widget_arrow {        position: absolute;        border: solid 5px;        border-top-color: transparent!important;        border-right-color: transparent!important;        border-left-color: transparent!important;        top: -5px;    }</style><script src="Introduction%20to%20Compressive%20Sensing_files/mode-html.js" type="text/javascript"></script><script src="Introduction%20to%20Compressive%20Sensing_files/mode-css.js" type="text/javascript"></script><script src="Introduction%20to%20Compressive%20Sensing_files/mode-javascript.js" type="text/javascript"></script><script src="Introduction%20to%20Compressive%20Sensing_files/mode-coffee.js" type="text/javascript"></script><script src="Introduction%20to%20Compressive%20Sensing_files/mode-python.js" type="text/javascript"></script><script src="Introduction%20to%20Compressive%20Sensing_files/mode-matlab.js" type="text/javascript"></script><script src="Introduction%20to%20Compressive%20Sensing_files/mode-latex.js" type="text/javascript"></script><link href="Introduction%20to%20Compressive%20Sensing_files/ace.css" rel="stylesheet" type="text/css"><style id="puzlet_ace_custom_styles" type="text/css">.ace-tm {
+	background: #f4f4f4;;
+}
+.ace-tm .ace_gutter {
+	color: #aaa;
+	background: #f8f8f8;
+}
+.ace_gutter-cell {
+	padding-left: 15px;
+	background: #eee;
+}
+.ace-tm .ace_print_margin {
+	background: #f0f0f0;
+}</style><script type="text/x-mathjax-config;executed=true">$blab.mathjaxConfig();</script><script src="Introduction%20to%20Compressive%20Sensing_files/MathJax.js" type="text/javascript"></script><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1px; bottom: 2px; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Hover_Arrow {position: absolute; width: 15px; height: 11px; cursor: pointer}
+</style><style type="text/css">.MathJax_Display {text-align: center; margin: 1em 0em; position: relative; display: block!important; text-indent: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; width: 100%}
+.MathJax .merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MathJax .MJX-monospace {font-family: monospace}
+.MathJax .MJX-sans-serif {font-family: sans-serif}
+#MathJax_Tooltip {background-color: InfoBackground; color: InfoText; border: 1px solid black; box-shadow: 2px 2px 5px #AAAAAA; -webkit-box-shadow: 2px 2px 5px #AAAAAA; -moz-box-shadow: 2px 2px 5px #AAAAAA; -khtml-box-shadow: 2px 2px 5px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true'); padding: 3px 4px; z-index: 401; position: absolute; left: 0; top: 0; width: auto; height: auto; display: none}
+.MathJax {display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0; min-height: 0; border: 0; padding: 0; margin: 0}
+.MathJax img, .MathJax nobr, .MathJax a {border: 0; padding: 0; margin: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+img.MathJax_strut {border: 0!important; padding: 0!important; margin: 0!important; vertical-align: 0!important}
+.MathJax span {display: inline; position: static; border: 0; padding: 0; margin: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+.MathJax nobr {white-space: nowrap!important}
+.MathJax img {display: inline!important; float: none!important}
+.MathJax * {transition: none; -webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none}
+.MathJax_Processing {visibility: hidden; position: fixed; width: 0; height: 0; overflow: hidden}
+.MathJax_Processed {display: none!important}
+.MathJax_ExBox {display: block!important; overflow: hidden; width: 1px; height: 60ex; min-height: 0; max-height: none}
+.MathJax .MathJax_EmBox {display: block!important; overflow: hidden; width: 1px; height: 60em; min-height: 0; max-height: none}
+.MathJax .MathJax_HitBox {cursor: text; background: white; opacity: 0; filter: alpha(opacity=0)}
+.MathJax .MathJax_HitBox * {filter: none; opacity: 1; background: transparent}
+#MathJax_Tooltip * {filter: none; opacity: 1; background: transparent}
+@font-face {font-family: MathJax_Blank; src: url('about:blank')}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; color: #666666}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_Menu_Close {position: absolute; width: 31px; height: 31px; top: -15px; left: -15px}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style></head><body><div style="visibility: hidden; overflow: hidden; position: absolute; top: 0px; height: 1px; width: auto; padding: 0px; border: 0px none; margin: 0px; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal;"><div id="MathJax_Hidden"></div></div><div style="display: none;" id="MathJax_Message"></div><div id="blab_container"><p></p><div id="text"><p></p>
+<h2> Introduction to Compressive Sensing </h2>
+
+<p></p><div id="left_col">
+<a href="http://en.wikipedia.org/wiki/Digital_signal" target="_blank"> Digital signals</a> behave as functions
+and can be defined using a finite number of points with integer values.  Such points
+are referred to as samples.  Parametrizing the function and its associated samples
+allows one to determine all of the digital signals of a given degree that pass through
+the given, fixed samples.<p></p>
+<p>The number of samples required to accurately define such signals depends on the 
+degrees of freedom stipulated by the parameterization of the function: the number
+of samples needed is the difference between degree of the associated polynomial
+and the number of parameters.  From here, recovering the original signal to determine
+the fewest samples necessary is done by minimizing the parameterized function. 
+Such an approach is referred to as 
+<a href="http://en.wikipedia.org/wiki/Compressive_sensing" target="_blank"> Compressive Sensing</a>.</p>
+<p>Use the menu below to select the number of samples to test</p>
+<p></p></div><p></p>
+<p></p><div id="right_col"><p></p>
+<p>Consider a cubic function. Four samples uniquely define a cubic.  Hence,
+one can determine the original polynomial using either two samples with 
+two parameters, or three samples with one parameter.</p>
+<p> 
+Given any cubic function, it can exist as <em>either</em> 
+a constant (<span class="MathJax_Preview"></span><span style="" aria-readonly="true" role="textbox" id="MathJax-Element-1-Frame" class="MathJax"><nobr><span style="width: 4.578em; display: inline-block;" id="MathJax-Span-1" class="math"><span style="display: inline-block; position: relative; width: 3.621em; height: 0px; font-size: 126%;"><span style="position: absolute; clip: rect(1.703em, 1000em, 2.886em, -0.593em); top: -2.53em; left: 0em;"><span id="MathJax-Span-2" class="mrow"><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-3" class="mi">f<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.146em;"></span></span><span style="font-family: STIXGeneral;" id="MathJax-Span-4" class="mo">(</span><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-5" class="mi">t<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.018em;"></span></span><span style="font-family: STIXGeneral;" id="MathJax-Span-6" class="mo">)</span><span style="font-family: STIXGeneral; padding-left: 0.313em;" id="MathJax-Span-7" class="mo">=</span><span style="padding-left: 0.313em;" id="MathJax-Span-8" class="msubsup"><span style="display: inline-block; position: relative; width: 0.918em; height: 0px;"><span style="position: absolute; clip: rect(1.94em, 1000em, 2.69em, -0.429em); top: -2.53em; left: 0em;"><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-9" class="mi">a</span><span style="display: inline-block; width: 0px; height: 2.53em;"></span></span><span style="position: absolute; top: -2.181em; left: 0.496em;"><span style="font-size: 70.7%; font-family: STIXGeneral;" id="MathJax-Span-10" class="mn">0</span><span style="display: inline-block; width: 0px; height: 2.331em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.53em;"></span></span></span><span style="border-left: 0em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.24em; vertical-align: -0.323em;"></span></span></nobr></span><script id="MathJax-Element-1" type="math/tex">f(t)=a_0</script>), a line (<span class="MathJax_Preview"></span><span style="" aria-readonly="true" role="textbox" id="MathJax-Element-2-Frame" class="MathJax"><nobr><span style="width: 4.953em; display: inline-block;" id="MathJax-Span-11" class="math"><span style="display: inline-block; position: relative; width: 3.919em; height: 0px; font-size: 126%;"><span style="position: absolute; clip: rect(1.703em, 1000em, 2.886em, -0.593em); top: -2.53em; left: 0em;"><span id="MathJax-Span-12" class="mrow"><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-13" class="mi">f<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.146em;"></span></span><span style="font-family: STIXGeneral;" id="MathJax-Span-14" class="mo">(</span><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-15" class="mi">t<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.018em;"></span></span><span style="font-family: STIXGeneral;" id="MathJax-Span-16" class="mo">)</span><span style="font-family: STIXGeneral; padding-left: 0.313em;" id="MathJax-Span-17" class="mo">=</span><span style="padding-left: 0.313em;" id="MathJax-Span-18" class="msubsup"><span style="display: inline-block; position: relative; width: 0.918em; height: 0px;"><span style="position: absolute; clip: rect(1.94em, 1000em, 2.69em, -0.429em); top: -2.53em; left: 0em;"><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-19" class="mi">a</span><span style="display: inline-block; width: 0px; height: 2.53em;"></span></span><span style="position: absolute; top: -2.181em; left: 0.496em;"><span style="font-size: 70.7%; font-family: STIXGeneral;" id="MathJax-Span-20" class="mn">1</span><span style="display: inline-block; width: 0px; height: 2.331em;"></span></span></span></span><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-21" class="mi">t<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.018em;"></span></span></span><span style="display: inline-block; width: 0px; height: 2.53em;"></span></span></span><span style="border-left: 0em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.24em; vertical-align: -0.323em;"></span></span></nobr></span><script id="MathJax-Element-2" type="math/tex">f(t)=a_1t</script>), a parabola 
+(<span class="MathJax_Preview"></span><span style="" aria-readonly="true" role="textbox" id="MathJax-Element-3-Frame" class="MathJax"><nobr><span style="width: 5.578em; display: inline-block;" id="MathJax-Span-22" class="math"><span style="display: inline-block; position: relative; width: 4.415em; height: 0px; font-size: 126%;"><span style="position: absolute; clip: rect(1.54em, 1000em, 2.886em, -0.593em); top: -2.53em; left: 0em;"><span id="MathJax-Span-23" class="mrow"><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-24" class="mi">f<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.146em;"></span></span><span style="font-family: STIXGeneral;" id="MathJax-Span-25" class="mo">(</span><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-26" class="mi">t<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.018em;"></span></span><span style="font-family: STIXGeneral;" id="MathJax-Span-27" class="mo">)</span><span style="font-family: STIXGeneral; padding-left: 0.313em;" id="MathJax-Span-28" class="mo">=</span><span style="padding-left: 0.313em;" id="MathJax-Span-29" class="msubsup"><span style="display: inline-block; position: relative; width: 0.918em; height: 0px;"><span style="position: absolute; clip: rect(1.94em, 1000em, 2.69em, -0.429em); top: -2.53em; left: 0em;"><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-30" class="mi">a</span><span style="display: inline-block; width: 0px; height: 2.53em;"></span></span><span style="position: absolute; top: -2.181em; left: 0.496em;"><span style="font-size: 70.7%; font-family: STIXGeneral;" id="MathJax-Span-31" class="mn">2</span><span style="display: inline-block; width: 0px; height: 2.331em;"></span></span></span></span><span id="MathJax-Span-32" class="msubsup"><span style="display: inline-block; position: relative; width: 0.775em; height: 0px;"><span style="position: absolute; clip: rect(1.835em, 1000em, 2.69em, -0.408em); top: -2.53em; left: 0em;"><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-33" class="mi">t<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.018em;"></span></span><span style="display: inline-block; width: 0px; height: 2.53em;"></span></span><span style="position: absolute; top: -2.694em; left: 0.353em;"><span style="font-size: 70.7%; font-family: STIXGeneral;" id="MathJax-Span-34" class="mn">2</span><span style="display: inline-block; width: 0px; height: 2.331em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.53em;"></span></span></span><span style="border-left: 0em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.445em; vertical-align: -0.323em;"></span></span></nobr></span><script id="MathJax-Element-3" type="math/tex">f(t)=a_2t^2</script>), or a third-degree function (<span class="MathJax_Preview"></span><span style="" aria-readonly="true" role="textbox" id="MathJax-Element-4-Frame" class="MathJax"><nobr><span style="width: 5.578em; display: inline-block;" id="MathJax-Span-35" class="math"><span style="display: inline-block; position: relative; width: 4.415em; height: 0px; font-size: 126%;"><span style="position: absolute; clip: rect(1.54em, 1000em, 2.886em, -0.593em); top: -2.53em; left: 0em;"><span id="MathJax-Span-36" class="mrow"><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-37" class="mi">f<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.146em;"></span></span><span style="font-family: STIXGeneral;" id="MathJax-Span-38" class="mo">(</span><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-39" class="mi">t<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.018em;"></span></span><span style="font-family: STIXGeneral;" id="MathJax-Span-40" class="mo">)</span><span style="font-family: STIXGeneral; padding-left: 0.313em;" id="MathJax-Span-41" class="mo">=</span><span style="padding-left: 0.313em;" id="MathJax-Span-42" class="msubsup"><span style="display: inline-block; position: relative; width: 0.918em; height: 0px;"><span style="position: absolute; clip: rect(1.94em, 1000em, 2.69em, -0.429em); top: -2.53em; left: 0em;"><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-43" class="mi">a</span><span style="display: inline-block; width: 0px; height: 2.53em;"></span></span><span style="position: absolute; top: -2.181em; left: 0.496em;"><span style="font-size: 70.7%; font-family: STIXGeneral;" id="MathJax-Span-44" class="mn">3</span><span style="display: inline-block; width: 0px; height: 2.331em;"></span></span></span></span><span id="MathJax-Span-45" class="msubsup"><span style="display: inline-block; position: relative; width: 0.775em; height: 0px;"><span style="position: absolute; clip: rect(1.835em, 1000em, 2.69em, -0.408em); top: -2.53em; left: 0em;"><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-46" class="mi">t<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.018em;"></span></span><span style="display: inline-block; width: 0px; height: 2.53em;"></span></span><span style="position: absolute; top: -2.694em; left: 0.353em;"><span style="font-size: 70.7%; font-family: STIXGeneral;" id="MathJax-Span-47" class="mn">3</span><span style="display: inline-block; width: 0px; height: 2.331em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.53em;"></span></span></span><span style="border-left: 0em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.445em; vertical-align: -0.323em;"></span></span></nobr></span><script id="MathJax-Element-4" type="math/tex">f(t)=a_3t^3</script>). 
+The samples and parameters help to determine which is true
+for all third-degree functions that pass through the given
+samples.</p>
+<p>Below, we see that we can recover <span class="MathJax_Preview"></span><span style="" aria-readonly="true" role="textbox" id="MathJax-Element-5-Frame" class="MathJax"><nobr><span style="width: 14.828em; display: inline-block;" id="MathJax-Span-48" class="math"><span style="display: inline-block; position: relative; width: 11.756em; height: 0px; font-size: 126%;"><span style="position: absolute; clip: rect(1.54em, 1000em, 2.886em, -0.593em); top: -2.53em; left: 0em;"><span id="MathJax-Span-49" class="mrow"><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-50" class="mi">f<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.146em;"></span></span><span style="font-family: STIXGeneral;" id="MathJax-Span-51" class="mo">(</span><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-52" class="mi">t<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.018em;"></span></span><span style="font-family: STIXGeneral;" id="MathJax-Span-53" class="mo">)</span><span style="font-family: STIXGeneral; padding-left: 0.313em;" id="MathJax-Span-54" class="mo">=</span><span style="padding-left: 0.313em;" id="MathJax-Span-55" class="msubsup"><span style="display: inline-block; position: relative; width: 0.918em; height: 0px;"><span style="position: absolute; clip: rect(1.94em, 1000em, 2.69em, -0.429em); top: -2.53em; left: 0em;"><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-56" class="mi">a</span><span style="display: inline-block; width: 0px; height: 2.53em;"></span></span><span style="position: absolute; top: -2.181em; left: 0.496em;"><span style="font-size: 70.7%; font-family: STIXGeneral;" id="MathJax-Span-57" class="mn">0</span><span style="display: inline-block; width: 0px; height: 2.331em;"></span></span></span></span><span style="font-family: STIXGeneral; padding-left: 0.25em;" id="MathJax-Span-58" class="mo">+</span><span style="padding-left: 0.25em;" id="MathJax-Span-59" class="msubsup"><span style="display: inline-block; position: relative; width: 0.918em; height: 0px;"><span style="position: absolute; clip: rect(1.94em, 1000em, 2.69em, -0.429em); top: -2.53em; left: 0em;"><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-60" class="mi">a</span><span style="display: inline-block; width: 0px; height: 2.53em;"></span></span><span style="position: absolute; top: -2.181em; left: 0.496em;"><span style="font-size: 70.7%; font-family: STIXGeneral;" id="MathJax-Span-61" class="mn">1</span><span style="display: inline-block; width: 0px; height: 2.331em;"></span></span></span></span><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-62" class="mi">t<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.018em;"></span></span><span style="font-family: STIXGeneral; padding-left: 0.25em;" id="MathJax-Span-63" class="mo">+</span><span style="padding-left: 0.25em;" id="MathJax-Span-64" class="msubsup"><span style="display: inline-block; position: relative; width: 0.918em; height: 0px;"><span style="position: absolute; clip: rect(1.94em, 1000em, 2.69em, -0.429em); top: -2.53em; left: 0em;"><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-65" class="mi">a</span><span style="display: inline-block; width: 0px; height: 2.53em;"></span></span><span style="position: absolute; top: -2.181em; left: 0.496em;"><span style="font-size: 70.7%; font-family: STIXGeneral;" id="MathJax-Span-66" class="mn">2</span><span style="display: inline-block; width: 0px; height: 2.331em;"></span></span></span></span><span id="MathJax-Span-67" class="msubsup"><span style="display: inline-block; position: relative; width: 0.775em; height: 0px;"><span style="position: absolute; clip: rect(1.835em, 1000em, 2.69em, -0.408em); top: -2.53em; left: 0em;"><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-68" class="mi">t<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.018em;"></span></span><span style="display: inline-block; width: 0px; height: 2.53em;"></span></span><span style="position: absolute; top: -2.694em; left: 0.353em;"><span style="font-size: 70.7%; font-family: STIXGeneral;" id="MathJax-Span-69" class="mn">2</span><span style="display: inline-block; width: 0px; height: 2.331em;"></span></span></span></span><span style="font-family: STIXGeneral; padding-left: 0.25em;" id="MathJax-Span-70" class="mo">+</span><span style="padding-left: 0.25em;" id="MathJax-Span-71" class="msubsup"><span style="display: inline-block; position: relative; width: 0.918em; height: 0px;"><span style="position: absolute; clip: rect(1.94em, 1000em, 2.69em, -0.429em); top: -2.53em; left: 0em;"><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-72" class="mi">a</span><span style="display: inline-block; width: 0px; height: 2.53em;"></span></span><span style="position: absolute; top: -2.181em; left: 0.496em;"><span style="font-size: 70.7%; font-family: STIXGeneral;" id="MathJax-Span-73" class="mn">3</span><span style="display: inline-block; width: 0px; height: 2.331em;"></span></span></span></span><span id="MathJax-Span-74" class="msubsup"><span style="display: inline-block; position: relative; width: 0.775em; height: 0px;"><span style="position: absolute; clip: rect(1.835em, 1000em, 2.69em, -0.408em); top: -2.53em; left: 0em;"><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-75" class="mi">t<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.018em;"></span></span><span style="display: inline-block; width: 0px; height: 2.53em;"></span></span><span style="position: absolute; top: -2.694em; left: 0.353em;"><span style="font-size: 70.7%; font-family: STIXGeneral;" id="MathJax-Span-76" class="mn">3</span><span style="display: inline-block; width: 0px; height: 2.331em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.53em;"></span></span></span><span style="border-left: 0em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.445em; vertical-align: -0.323em;"></span></span></nobr></span><script id="MathJax-Element-5" type="math/tex">f(t)=a_0+a_1 t +a_2 t^2 + a_3 t^3</script> 
+from <strong>three</strong> samples given a single parameter, k, dictated by the slider.
+The original signal, upon minimizing the absolute values of the coefficients 
+of the function, becomes apparent: zero coefficients increase the clarity of 
+the signal.  Likewise, we can recover <span class="MathJax_Preview"></span><span style="" aria-readonly="true" role="textbox" id="MathJax-Element-6-Frame" class="MathJax"><nobr><span style="width: 14.828em; display: inline-block;" id="MathJax-Span-77" class="math"><span style="display: inline-block; position: relative; width: 11.756em; height: 0px; font-size: 126%;"><span style="position: absolute; clip: rect(1.54em, 1000em, 2.886em, -0.593em); top: -2.53em; left: 0em;"><span id="MathJax-Span-78" class="mrow"><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-79" class="mi">f<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.146em;"></span></span><span style="font-family: STIXGeneral;" id="MathJax-Span-80" class="mo">(</span><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-81" class="mi">t<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.018em;"></span></span><span style="font-family: STIXGeneral;" id="MathJax-Span-82" class="mo">)</span><span style="font-family: STIXGeneral; padding-left: 0.313em;" id="MathJax-Span-83" class="mo">=</span><span style="padding-left: 0.313em;" id="MathJax-Span-84" class="msubsup"><span style="display: inline-block; position: relative; width: 0.918em; height: 0px;"><span style="position: absolute; clip: rect(1.94em, 1000em, 2.69em, -0.429em); top: -2.53em; left: 0em;"><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-85" class="mi">a</span><span style="display: inline-block; width: 0px; height: 2.53em;"></span></span><span style="position: absolute; top: -2.181em; left: 0.496em;"><span style="font-size: 70.7%; font-family: STIXGeneral;" id="MathJax-Span-86" class="mn">0</span><span style="display: inline-block; width: 0px; height: 2.331em;"></span></span></span></span><span style="font-family: STIXGeneral; padding-left: 0.25em;" id="MathJax-Span-87" class="mo">+</span><span style="padding-left: 0.25em;" id="MathJax-Span-88" class="msubsup"><span style="display: inline-block; position: relative; width: 0.918em; height: 0px;"><span style="position: absolute; clip: rect(1.94em, 1000em, 2.69em, -0.429em); top: -2.53em; left: 0em;"><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-89" class="mi">a</span><span style="display: inline-block; width: 0px; height: 2.53em;"></span></span><span style="position: absolute; top: -2.181em; left: 0.496em;"><span style="font-size: 70.7%; font-family: STIXGeneral;" id="MathJax-Span-90" class="mn">1</span><span style="display: inline-block; width: 0px; height: 2.331em;"></span></span></span></span><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-91" class="mi">t<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.018em;"></span></span><span style="font-family: STIXGeneral; padding-left: 0.25em;" id="MathJax-Span-92" class="mo">+</span><span style="padding-left: 0.25em;" id="MathJax-Span-93" class="msubsup"><span style="display: inline-block; position: relative; width: 0.918em; height: 0px;"><span style="position: absolute; clip: rect(1.94em, 1000em, 2.69em, -0.429em); top: -2.53em; left: 0em;"><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-94" class="mi">a</span><span style="display: inline-block; width: 0px; height: 2.53em;"></span></span><span style="position: absolute; top: -2.181em; left: 0.496em;"><span style="font-size: 70.7%; font-family: STIXGeneral;" id="MathJax-Span-95" class="mn">2</span><span style="display: inline-block; width: 0px; height: 2.331em;"></span></span></span></span><span id="MathJax-Span-96" class="msubsup"><span style="display: inline-block; position: relative; width: 0.775em; height: 0px;"><span style="position: absolute; clip: rect(1.835em, 1000em, 2.69em, -0.408em); top: -2.53em; left: 0em;"><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-97" class="mi">t<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.018em;"></span></span><span style="display: inline-block; width: 0px; height: 2.53em;"></span></span><span style="position: absolute; top: -2.694em; left: 0.353em;"><span style="font-size: 70.7%; font-family: STIXGeneral;" id="MathJax-Span-98" class="mn">2</span><span style="display: inline-block; width: 0px; height: 2.331em;"></span></span></span></span><span style="font-family: STIXGeneral; padding-left: 0.25em;" id="MathJax-Span-99" class="mo">+</span><span style="padding-left: 0.25em;" id="MathJax-Span-100" class="msubsup"><span style="display: inline-block; position: relative; width: 0.918em; height: 0px;"><span style="position: absolute; clip: rect(1.94em, 1000em, 2.69em, -0.429em); top: -2.53em; left: 0em;"><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-101" class="mi">a</span><span style="display: inline-block; width: 0px; height: 2.53em;"></span></span><span style="position: absolute; top: -2.181em; left: 0.496em;"><span style="font-size: 70.7%; font-family: STIXGeneral;" id="MathJax-Span-102" class="mn">3</span><span style="display: inline-block; width: 0px; height: 2.331em;"></span></span></span></span><span id="MathJax-Span-103" class="msubsup"><span style="display: inline-block; position: relative; width: 0.775em; height: 0px;"><span style="position: absolute; clip: rect(1.835em, 1000em, 2.69em, -0.408em); top: -2.53em; left: 0em;"><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-104" class="mi">t<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.018em;"></span></span><span style="display: inline-block; width: 0px; height: 2.53em;"></span></span><span style="position: absolute; top: -2.694em; left: 0.353em;"><span style="font-size: 70.7%; font-family: STIXGeneral;" id="MathJax-Span-105" class="mn">3</span><span style="display: inline-block; width: 0px; height: 2.331em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.53em;"></span></span></span><span style="border-left: 0em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.445em; vertical-align: -0.323em;"></span></span></nobr></span><script id="MathJax-Element-6" type="math/tex">f(t)=a_0+a_1 t +a_2 t^2 + a_3 t^3</script> 
+from <strong>two</strong> samples given two parameters, k and l.  </p>
+<p></p></div><p></p>
+<p>  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="Introduction%20to%20Compressive%20Sensing_files/bootstrap.css">
+  <script src="Introduction%20to%20Compressive%20Sensing_files/jquery_004.js"></script>
+  <script src="Introduction%20to%20Compressive%20Sensing_files/bootstrap.js"></script></p>
+<p>  
+</p><div class="container">
+  <div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">3 Samples
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+      <li id="3samples" role="presentation"><a role="menuitem" tabindex="-1" href="#3samples">3 samples</a></li><p></p>
+<p>      </p><li id="2samples" role="presentation"><a role="menuitem" tabindex="-1" href="#2samples">2 samples</a></li>
+      <div>
+  </div>
+  </ul>
+</div><p></p>
+<p></p><div id="graph1">
+<div id="graph_container"><p></p>
+<p></p><div class="graph_text" id="text1">
+<span class="firstcharacter" id="first_step">1</span>
+With too few samples with repsect to the parameter, a signal has 
+<a href="http://en.wikipedia.org/wiki/Aliasing" target="_blank">aliases</a>.
+E.g., 
+<span class="MathJax_Preview"></span><span style="" aria-readonly="true" role="textbox" id="MathJax-Element-7-Frame" class="MathJax"><nobr><span style="width: 14.089em; display: inline-block;" id="MathJax-Span-106" class="math"><span style="display: inline-block; position: relative; width: 11.726em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.54em, 1000em, 2.945em, -0.683em); top: -2.56em; left: 0em;"><span id="MathJax-Span-107" class="mrow"><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-108" class="mi">f<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.146em;"></span></span><span style="font-family: STIXGeneral;" id="MathJax-Span-109" class="mo">(</span><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-110" class="mi">t<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.018em;"></span></span><span style="font-family: STIXGeneral;" id="MathJax-Span-111" class="mo">)</span><span style="font-family: STIXGeneral; padding-left: 0.313em;" id="MathJax-Span-112" class="mo">=</span><span style="padding-left: 0.313em; color: red;" id="MathJax-Span-113" class="mstyle"><span style="color: red;" id="MathJax-Span-114" class="mrow"><span style="color: red;" id="MathJax-Span-115" class="msubsup"><span style="display: inline-block; position: relative; width: 0.908em; height: 0px;"><span style="position: absolute; clip: rect(1.94em, 1000em, 2.749em, -0.519em); top: -2.56em; left: 0em;"><span style="font-family: STIXGeneral; font-style: italic; color: red;" id="MathJax-Span-116" class="mi">a</span><span style="display: inline-block; width: 0px; height: 2.56em;"></span></span><span style="position: absolute; top: -2.171em; left: 0.476em;"><span style="font-size: 70.7%; font-family: STIXGeneral; color: red;" id="MathJax-Span-117" class="mn">0</span><span style="display: inline-block; width: 0px; height: 2.321em;"></span></span></span></span></span></span><span style="font-family: STIXGeneral; padding-left: 0.25em;" id="MathJax-Span-118" class="mo">+</span><span style="padding-left: 0.25em; color: blue;" id="MathJax-Span-119" class="mstyle"><span style="color: blue;" id="MathJax-Span-120" class="mrow"><span style="color: blue;" id="MathJax-Span-121" class="msubsup"><span style="display: inline-block; position: relative; width: 0.908em; height: 0px;"><span style="position: absolute; clip: rect(1.94em, 1000em, 2.749em, -0.519em); top: -2.56em; left: 0em;"><span style="font-family: STIXGeneral; font-style: italic; color: blue;" id="MathJax-Span-122" class="mi">a</span><span style="display: inline-block; width: 0px; height: 2.56em;"></span></span><span style="position: absolute; top: -2.171em; left: 0.476em;"><span style="font-size: 70.7%; font-family: STIXGeneral; color: blue;" id="MathJax-Span-123" class="mn">1</span><span style="display: inline-block; width: 0px; height: 2.321em;"></span></span></span></span></span></span><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-124" class="mi">t<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.018em;"></span></span><span style="font-family: STIXGeneral; padding-left: 0.25em;" id="MathJax-Span-125" class="mo">+</span><span style="padding-left: 0.25em; color: green;" id="MathJax-Span-126" class="mstyle"><span style="color: green;" id="MathJax-Span-127" class="mrow"><span style="color: green;" id="MathJax-Span-128" class="msubsup"><span style="display: inline-block; position: relative; width: 0.908em; height: 0px;"><span style="position: absolute; clip: rect(1.94em, 1000em, 2.749em, -0.519em); top: -2.56em; left: 0em;"><span style="font-family: STIXGeneral; font-style: italic; color: green;" id="MathJax-Span-129" class="mi">a</span><span style="display: inline-block; width: 0px; height: 2.56em;"></span></span><span style="position: absolute; top: -2.171em; left: 0.476em;"><span style="font-size: 70.7%; font-family: STIXGeneral; color: green;" id="MathJax-Span-130" class="mn">2</span><span style="display: inline-block; width: 0px; height: 2.321em;"></span></span></span></span></span></span><span id="MathJax-Span-131" class="msubsup"><span style="display: inline-block; position: relative; width: 0.785em; height: 0px;"><span style="position: absolute; clip: rect(1.835em, 1000em, 2.749em, -0.498em); top: -2.56em; left: 0em;"><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-132" class="mi">t<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.018em;"></span></span><span style="display: inline-block; width: 0px; height: 2.56em;"></span></span><span style="position: absolute; top: -2.684em; left: 0.353em;"><span style="font-size: 70.7%; font-family: STIXGeneral;" id="MathJax-Span-133" class="mn">2</span><span style="display: inline-block; width: 0px; height: 2.321em;"></span></span></span></span><span style="font-family: STIXGeneral; padding-left: 0.25em;" id="MathJax-Span-134" class="mo">+</span><span style="padding-left: 0.25em; color: purple;" id="MathJax-Span-135" class="mstyle"><span style="color: purple;" id="MathJax-Span-136" class="mrow"><span style="color: purple;" id="MathJax-Span-137" class="msubsup"><span style="display: inline-block; position: relative; width: 0.908em; height: 0px;"><span style="position: absolute; clip: rect(1.94em, 1000em, 2.749em, -0.519em); top: -2.56em; left: 0em;"><span style="font-family: STIXGeneral; font-style: italic; color: purple;" id="MathJax-Span-138" class="mi">a</span><span style="display: inline-block; width: 0px; height: 2.56em;"></span></span><span style="position: absolute; top: -2.171em; left: 0.476em;"><span style="font-size: 70.7%; font-family: STIXGeneral; color: purple;" id="MathJax-Span-139" class="mn">3</span><span style="display: inline-block; width: 0px; height: 2.321em;"></span></span></span></span></span></span><span id="MathJax-Span-140" class="msubsup"><span style="display: inline-block; position: relative; width: 0.785em; height: 0px;"><span style="position: absolute; clip: rect(1.835em, 1000em, 2.749em, -0.498em); top: -2.56em; left: 0em;"><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-141" class="mi">t<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.018em;"></span></span><span style="display: inline-block; width: 0px; height: 2.56em;"></span></span><span style="position: absolute; top: -2.684em; left: 0.353em;"><span style="font-size: 70.7%; font-family: STIXGeneral;" id="MathJax-Span-142" class="mn">3</span><span style="display: inline-block; width: 0px; height: 2.321em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.56em;"></span></span></span><span style="border-left: 0em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.4em; vertical-align: -0.32em;"></span></span></nobr></span><script id="MathJax-Element-7" type="math/tex">f(t)=\color{red}{a_0}+\color{blue}{a_1}t+\color{green}{a_2}t^2+\color{purple}{a_3}t^3</script>
+with two samples and one parameter.
+</div><p></p>
+<p></p><div class="graph_text" id="text2">
+<span class="firstcharacter">2</span>
+Move the slider &amp; watch 
+<span class="MathJax_Preview"></span><span style="" aria-readonly="true" role="textbox" id="MathJax-Element-8-Frame" class="MathJax"><nobr><span style="width: 1.589em; display: inline-block;" id="MathJax-Span-143" class="math"><span style="display: inline-block; position: relative; width: 1.31em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.705em, 1000em, 2.898em, -0.469em); top: -2.56em; left: 0em;"><span id="MathJax-Span-144" class="mrow"><span style="color: red;" id="MathJax-Span-145" class="mstyle"><span style="color: red;" id="MathJax-Span-146" class="mrow"><span style="color: red;" id="MathJax-Span-147" class="texatom"><span style="color: red;" id="MathJax-Span-148" class="mrow"><span style="font-family: STIXGeneral; color: red;" id="MathJax-Span-149" class="mo">|</span></span></span><span style="color: red;" id="MathJax-Span-150" class="msubsup"><span style="display: inline-block; position: relative; width: 0.908em; height: 0px;"><span style="position: absolute; clip: rect(1.94em, 1000em, 2.749em, -0.519em); top: -2.56em; left: 0em;"><span style="font-family: STIXGeneral; font-style: italic; color: red;" id="MathJax-Span-151" class="mi">a</span><span style="display: inline-block; width: 0px; height: 2.56em;"></span></span><span style="position: absolute; top: -2.171em; left: 0.476em;"><span style="font-size: 70.7%; font-family: STIXGeneral; color: red;" id="MathJax-Span-152" class="mn">0</span><span style="display: inline-block; width: 0px; height: 2.321em;"></span></span></span></span><span style="color: red;" id="MathJax-Span-153" class="texatom"><span style="color: red;" id="MathJax-Span-154" class="mrow"><span style="font-family: STIXGeneral; color: red;" id="MathJax-Span-155" class="mo">|</span></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.56em;"></span></span></span><span style="border-left: 0em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.146em; vertical-align: -0.263em;"></span></span></nobr></span><script id="MathJax-Element-8" type="math/tex">\color{red}{|a_0|}</script>, <span class="MathJax_Preview"></span><span style="" aria-readonly="true" role="textbox" id="MathJax-Element-9-Frame" class="MathJax"><nobr><span style="width: 1.589em; display: inline-block;" id="MathJax-Span-156" class="math"><span style="display: inline-block; position: relative; width: 1.31em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.705em, 1000em, 2.888em, -0.469em); top: -2.56em; left: 0em;"><span id="MathJax-Span-157" class="mrow"><span style="color: blue;" id="MathJax-Span-158" class="mstyle"><span style="color: blue;" id="MathJax-Span-159" class="mrow"><span style="color: blue;" id="MathJax-Span-160" class="texatom"><span style="color: blue;" id="MathJax-Span-161" class="mrow"><span style="font-family: STIXGeneral; color: blue;" id="MathJax-Span-162" class="mo">|</span></span></span><span style="color: blue;" id="MathJax-Span-163" class="msubsup"><span style="display: inline-block; position: relative; width: 0.908em; height: 0px;"><span style="position: absolute; clip: rect(1.94em, 1000em, 2.749em, -0.519em); top: -2.56em; left: 0em;"><span style="font-family: STIXGeneral; font-style: italic; color: blue;" id="MathJax-Span-164" class="mi">a</span><span style="display: inline-block; width: 0px; height: 2.56em;"></span></span><span style="position: absolute; top: -2.171em; left: 0.476em;"><span style="font-size: 70.7%; font-family: STIXGeneral; color: blue;" id="MathJax-Span-165" class="mn">1</span><span style="display: inline-block; width: 0px; height: 2.321em;"></span></span></span></span><span style="color: blue;" id="MathJax-Span-166" class="texatom"><span style="color: blue;" id="MathJax-Span-167" class="mrow"><span style="font-family: STIXGeneral; color: blue;" id="MathJax-Span-168" class="mo">|</span></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.56em;"></span></span></span><span style="border-left: 0em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.134em; vertical-align: -0.251em;"></span></span></nobr></span><script id="MathJax-Element-9" type="math/tex">\color{blue}{|a_1|}</script>, 
+<span class="MathJax_Preview"></span><span style="" aria-readonly="true" role="textbox" id="MathJax-Element-10-Frame" class="MathJax"><nobr><span style="width: 1.589em; display: inline-block;" id="MathJax-Span-169" class="math"><span style="display: inline-block; position: relative; width: 1.31em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.705em, 1000em, 2.888em, -0.469em); top: -2.56em; left: 0em;"><span id="MathJax-Span-170" class="mrow"><span style="color: green;" id="MathJax-Span-171" class="mstyle"><span style="color: green;" id="MathJax-Span-172" class="mrow"><span style="color: green;" id="MathJax-Span-173" class="texatom"><span style="color: green;" id="MathJax-Span-174" class="mrow"><span style="font-family: STIXGeneral; color: green;" id="MathJax-Span-175" class="mo">|</span></span></span><span style="color: green;" id="MathJax-Span-176" class="msubsup"><span style="display: inline-block; position: relative; width: 0.908em; height: 0px;"><span style="position: absolute; clip: rect(1.94em, 1000em, 2.749em, -0.519em); top: -2.56em; left: 0em;"><span style="font-family: STIXGeneral; font-style: italic; color: green;" id="MathJax-Span-177" class="mi">a</span><span style="display: inline-block; width: 0px; height: 2.56em;"></span></span><span style="position: absolute; top: -2.171em; left: 0.476em;"><span style="font-size: 70.7%; font-family: STIXGeneral; color: green;" id="MathJax-Span-178" class="mn">2</span><span style="display: inline-block; width: 0px; height: 2.321em;"></span></span></span></span><span style="color: green;" id="MathJax-Span-179" class="texatom"><span style="color: green;" id="MathJax-Span-180" class="mrow"><span style="font-family: STIXGeneral; color: green;" id="MathJax-Span-181" class="mo">|</span></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.56em;"></span></span></span><span style="border-left: 0em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.134em; vertical-align: -0.251em;"></span></span></nobr></span><script id="MathJax-Element-10" type="math/tex">\color{green}{|a_2|}</script>, and <span class="MathJax_Preview"></span><span style="" aria-readonly="true" role="textbox" id="MathJax-Element-11-Frame" class="MathJax"><nobr><span style="width: 1.589em; display: inline-block;" id="MathJax-Span-182" class="math"><span style="display: inline-block; position: relative; width: 1.31em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.705em, 1000em, 2.898em, -0.469em); top: -2.56em; left: 0em;"><span id="MathJax-Span-183" class="mrow"><span style="color: purple;" id="MathJax-Span-184" class="mstyle"><span style="color: purple;" id="MathJax-Span-185" class="mrow"><span style="color: purple;" id="MathJax-Span-186" class="texatom"><span style="color: purple;" id="MathJax-Span-187" class="mrow"><span style="font-family: STIXGeneral; color: purple;" id="MathJax-Span-188" class="mo">|</span></span></span><span style="color: purple;" id="MathJax-Span-189" class="msubsup"><span style="display: inline-block; position: relative; width: 0.908em; height: 0px;"><span style="position: absolute; clip: rect(1.94em, 1000em, 2.749em, -0.519em); top: -2.56em; left: 0em;"><span style="font-family: STIXGeneral; font-style: italic; color: purple;" id="MathJax-Span-190" class="mi">a</span><span style="display: inline-block; width: 0px; height: 2.56em;"></span></span><span style="position: absolute; top: -2.171em; left: 0.476em;"><span style="font-size: 70.7%; font-family: STIXGeneral; color: purple;" id="MathJax-Span-191" class="mn">3</span><span style="display: inline-block; width: 0px; height: 2.321em;"></span></span></span></span><span style="color: purple;" id="MathJax-Span-192" class="texatom"><span style="color: purple;" id="MathJax-Span-193" class="mrow"><span style="font-family: STIXGeneral; color: purple;" id="MathJax-Span-194" class="mo">|</span></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.56em;"></span></span></span><span style="border-left: 0em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.146em; vertical-align: -0.263em;"></span></span></nobr></span><script id="MathJax-Element-11" type="math/tex">\color{purple}{|a_3|}</script> in the bar.
+</div><p></p>
+<p></p><div class="graph_text" id="text3">
+<span class="firstcharacter">3</span>
+The slider dictates the value of the parameter of the 
+coefficients, k.
+</div><p></p>
+<p></p><div class="graph_text" id="text4">
+<span class="firstcharacter">4</span>
+In practice, find <span class="MathJax_Preview"></span><span style="" aria-readonly="true" role="textbox" id="MathJax-Element-12-Frame" class="MathJax"><nobr><span style="width: 1.661em; display: inline-block;" id="MathJax-Span-195" class="math"><span style="display: inline-block; position: relative; width: 1.369em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.703em, 1000em, 2.945em, -0.683em); top: -2.56em; left: 0em;"><span id="MathJax-Span-196" class="mrow"><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-197" class="mi">f<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.146em;"></span></span><span style="font-family: STIXGeneral;" id="MathJax-Span-198" class="mo">(</span><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-199" class="mi">t<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.018em;"></span></span><span style="font-family: STIXGeneral;" id="MathJax-Span-200" class="mo">)</span></span><span style="display: inline-block; width: 0px; height: 2.56em;"></span></span></span><span style="border-left: 0em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.205em; vertical-align: -0.32em;"></span></span></nobr></span><script id="MathJax-Element-12" type="math/tex">f(t)</script> by <em>minimizing</em> the total bar height.
+</div><p></p>
+<p><input id="slider" step="0.1" min="-1" max="3" value="2.9" type="range"></p>
+<p> 
+</p><div id="func"><table class="func">
+<tbody><tr><td style="text-align:right;">f(t) = </td><td><span style="color: red">2.9</span></td></tr><tr>
+</tr><tr><td style="text-align:right;">+</td><td><span style="color: blue">2.48</span>t</td></tr><tr>
+</tr><tr><td style="text-align:right;">+</td><td><span style="color: green">-1.6</span>t<sup>2</sup></td></tr><tr>
+</tr><tr><td style="text-align:right;">+</td><td><span style="color: purple">0.82</span>t<sup>3</sup></td></tr><tr>
+
+</tr></tbody></table></div>
+<div id="alias_graph"><svg height="300" width="400"><g transform="translate(80,20)"><g transform="translate(0,260)" class="axis"><g transform="translate(0,0)" style="opacity: 1;" class="tick"><line x2="0" y2="6"></line><text style="text-anchor: middle;" dy=".71em" x="0" y="9">-2</text></g><g transform="translate(60,0)" style="opacity: 1;" class="tick"><line x2="0" y2="6"></line><text style="text-anchor: middle;" dy=".71em" x="0" y="9">-1</text></g><g transform="translate(120,0)" style="opacity: 1;" class="tick"><line x2="0" y2="6"></line><text style="text-anchor: middle;" dy=".71em" x="0" y="9">0</text></g><g transform="translate(180.00000000000003,0)" style="opacity: 1;" class="tick"><line x2="0" y2="6"></line><text style="text-anchor: middle;" dy=".71em" x="0" y="9">1</text></g><g transform="translate(240,0)" style="opacity: 1;" class="tick"><line x2="0" y2="6"></line><text style="text-anchor: middle;" dy=".71em" x="0" y="9">2</text></g><g transform="translate(300,0)" style="opacity: 1;" class="tick"><line x2="0" y2="6"></line><text style="text-anchor: middle;" dy=".71em" x="0" y="9">3</text></g><path d="M0,6V0H300V6" class="domain"></path></g><g transform="translate(-25,0)" class="axis"><g transform="translate(0,260)" style="opacity: 1;" class="tick"><line y2="0" x2="-6"></line><text style="text-anchor: end;" dy=".32em" y="0" x="-9">-20</text></g><g transform="translate(0,195)" style="opacity: 1;" class="tick"><line y2="0" x2="-6"></line><text style="text-anchor: end;" dy=".32em" y="0" x="-9">-10</text></g><g transform="translate(0,130)" style="opacity: 1;" class="tick"><line y2="0" x2="-6"></line><text style="text-anchor: end;" dy=".32em" y="0" x="-9">0</text></g><g transform="translate(0,65)" style="opacity: 1;" class="tick"><line y2="0" x2="-6"></line><text style="text-anchor: end;" dy=".32em" y="0" x="-9">10</text></g><g transform="translate(0,0)" style="opacity: 1;" class="tick"><line y2="0" x2="-6"></line><text style="text-anchor: end;" dy=".32em" y="0" x="-9">20</text></g><path d="M-6,0H0V260H-6" class="domain"></path></g><path id="poly" d="M0,227.5L15,199.697265625L30,176.678125L45.00000000000001,157.94492187499998L60,143L75,131.345703125L90.00000000000001,122.484375L105.00000000000003,115.918359375L120,111.15L135,107.681640625L150,105.015625L165,102.654296875L180.00000000000003,100.09999999999997L195,96.855078125L210.00000000000006,92.421875L225,86.302734375L240,77.99999999999997L255.00000000000003,67.016015625L270,52.85312499999998L285,35.013671875"></path><circle r="5" cy="143" cx="60"></circle><circle r="5" cy="77.99999999999997" cx="240"></circle><circle r="5" cy="227.5" cx="0"></circle></g></svg></div>
+<div id="l1_bar"><svg height="300" width="120"><g transform="translate(50,20)"><g style="fill: purple;" class="layer"><rect height="21.23333333333335" y="238.76666666666665" x="0" width="34" stroke="#000" fill-opacity="0.5"></rect></g><g style="fill: green;" class="layer"><rect height="41.599999999999994" y="197.16666666666666" x="0" width="34" stroke="#000" fill-opacity="0.5"></rect></g><g style="fill: blue;" class="layer"><rect height="64.56666666666666" y="132.6" x="0" width="34" stroke="#000" fill-opacity="0.5"></rect></g><g style="fill: red;" class="layer"><rect height="75.40000000000003" y="57.19999999999996" x="0" width="34" stroke="#000" fill-opacity="0.5"></rect></g><g class="axis"><g transform="translate(0,260)" style="opacity: 1;" class="tick"><line y2="0" x2="0"></line><text style="text-anchor: end;" dy=".32em" y="0" x="-6">0</text></g><g transform="translate(0,208)" style="opacity: 1;" class="tick"><line y2="0" x2="0"></line><text style="text-anchor: end;" dy=".32em" y="0" x="-6">2</text></g><g transform="translate(0,156)" style="opacity: 1;" class="tick"><line y2="0" x2="0"></line><text style="text-anchor: end;" dy=".32em" y="0" x="-6">4</text></g><g transform="translate(0,103.99999999999997)" style="opacity: 1;" class="tick"><line y2="0" x2="0"></line><text style="text-anchor: end;" dy=".32em" y="0" x="-6">6</text></g><g transform="translate(0,52)" style="opacity: 1;" class="tick"><line y2="0" x2="0"></line><text style="text-anchor: end;" dy=".32em" y="0" x="-6">8</text></g><g transform="translate(0,0)" style="opacity: 1;" class="tick"><line y2="0" x2="0"></line><text style="text-anchor: end;" dy=".32em" y="0" x="-6">10</text></g><path d="M0,0H0V260H0" class="domain"></path></g></g></svg></div>
+</div><p></p>
+<p></p></div>
+<div id="graph2"><p></p>
+<p></p><div id="graph_container2"><p></p>
+<p> 
+</p><div class="graph_text" id="text1">
+<span class="firstcharacter" id="first_step">1</span>
+With too few samples with repsect to the parameter, a signal has 
+<a href="http://en.wikipedia.org/wiki/Aliasing" target="_blank">aliases</a>.
+E.g., 
+<span class="MathJax_Preview"></span><span style="" aria-readonly="true" role="textbox" id="MathJax-Element-13-Frame" class="MathJax"><nobr><span style="width: 14.089em; display: inline-block;" id="MathJax-Span-201" class="math"><span style="display: inline-block; position: relative; width: 11.726em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.54em, 1000em, 2.945em, -0.683em); top: -2.56em; left: 0em;"><span id="MathJax-Span-202" class="mrow"><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-203" class="mi">f<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.146em;"></span></span><span style="font-family: STIXGeneral;" id="MathJax-Span-204" class="mo">(</span><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-205" class="mi">t<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.018em;"></span></span><span style="font-family: STIXGeneral;" id="MathJax-Span-206" class="mo">)</span><span style="font-family: STIXGeneral; padding-left: 0.313em;" id="MathJax-Span-207" class="mo">=</span><span style="padding-left: 0.313em; color: red;" id="MathJax-Span-208" class="mstyle"><span style="color: red;" id="MathJax-Span-209" class="mrow"><span style="color: red;" id="MathJax-Span-210" class="msubsup"><span style="display: inline-block; position: relative; width: 0.908em; height: 0px;"><span style="position: absolute; clip: rect(1.94em, 1000em, 2.749em, -0.519em); top: -2.56em; left: 0em;"><span style="font-family: STIXGeneral; font-style: italic; color: red;" id="MathJax-Span-211" class="mi">a</span><span style="display: inline-block; width: 0px; height: 2.56em;"></span></span><span style="position: absolute; top: -2.171em; left: 0.476em;"><span style="font-size: 70.7%; font-family: STIXGeneral; color: red;" id="MathJax-Span-212" class="mn">0</span><span style="display: inline-block; width: 0px; height: 2.321em;"></span></span></span></span></span></span><span style="font-family: STIXGeneral; padding-left: 0.25em;" id="MathJax-Span-213" class="mo">+</span><span style="padding-left: 0.25em; color: blue;" id="MathJax-Span-214" class="mstyle"><span style="color: blue;" id="MathJax-Span-215" class="mrow"><span style="color: blue;" id="MathJax-Span-216" class="msubsup"><span style="display: inline-block; position: relative; width: 0.908em; height: 0px;"><span style="position: absolute; clip: rect(1.94em, 1000em, 2.749em, -0.519em); top: -2.56em; left: 0em;"><span style="font-family: STIXGeneral; font-style: italic; color: blue;" id="MathJax-Span-217" class="mi">a</span><span style="display: inline-block; width: 0px; height: 2.56em;"></span></span><span style="position: absolute; top: -2.171em; left: 0.476em;"><span style="font-size: 70.7%; font-family: STIXGeneral; color: blue;" id="MathJax-Span-218" class="mn">1</span><span style="display: inline-block; width: 0px; height: 2.321em;"></span></span></span></span></span></span><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-219" class="mi">t<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.018em;"></span></span><span style="font-family: STIXGeneral; padding-left: 0.25em;" id="MathJax-Span-220" class="mo">+</span><span style="padding-left: 0.25em; color: green;" id="MathJax-Span-221" class="mstyle"><span style="color: green;" id="MathJax-Span-222" class="mrow"><span style="color: green;" id="MathJax-Span-223" class="msubsup"><span style="display: inline-block; position: relative; width: 0.908em; height: 0px;"><span style="position: absolute; clip: rect(1.94em, 1000em, 2.749em, -0.519em); top: -2.56em; left: 0em;"><span style="font-family: STIXGeneral; font-style: italic; color: green;" id="MathJax-Span-224" class="mi">a</span><span style="display: inline-block; width: 0px; height: 2.56em;"></span></span><span style="position: absolute; top: -2.171em; left: 0.476em;"><span style="font-size: 70.7%; font-family: STIXGeneral; color: green;" id="MathJax-Span-225" class="mn">2</span><span style="display: inline-block; width: 0px; height: 2.321em;"></span></span></span></span></span></span><span id="MathJax-Span-226" class="msubsup"><span style="display: inline-block; position: relative; width: 0.785em; height: 0px;"><span style="position: absolute; clip: rect(1.835em, 1000em, 2.749em, -0.498em); top: -2.56em; left: 0em;"><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-227" class="mi">t<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.018em;"></span></span><span style="display: inline-block; width: 0px; height: 2.56em;"></span></span><span style="position: absolute; top: -2.684em; left: 0.353em;"><span style="font-size: 70.7%; font-family: STIXGeneral;" id="MathJax-Span-228" class="mn">2</span><span style="display: inline-block; width: 0px; height: 2.321em;"></span></span></span></span><span style="font-family: STIXGeneral; padding-left: 0.25em;" id="MathJax-Span-229" class="mo">+</span><span style="padding-left: 0.25em; color: purple;" id="MathJax-Span-230" class="mstyle"><span style="color: purple;" id="MathJax-Span-231" class="mrow"><span style="color: purple;" id="MathJax-Span-232" class="msubsup"><span style="display: inline-block; position: relative; width: 0.908em; height: 0px;"><span style="position: absolute; clip: rect(1.94em, 1000em, 2.749em, -0.519em); top: -2.56em; left: 0em;"><span style="font-family: STIXGeneral; font-style: italic; color: purple;" id="MathJax-Span-233" class="mi">a</span><span style="display: inline-block; width: 0px; height: 2.56em;"></span></span><span style="position: absolute; top: -2.171em; left: 0.476em;"><span style="font-size: 70.7%; font-family: STIXGeneral; color: purple;" id="MathJax-Span-234" class="mn">3</span><span style="display: inline-block; width: 0px; height: 2.321em;"></span></span></span></span></span></span><span id="MathJax-Span-235" class="msubsup"><span style="display: inline-block; position: relative; width: 0.785em; height: 0px;"><span style="position: absolute; clip: rect(1.835em, 1000em, 2.749em, -0.498em); top: -2.56em; left: 0em;"><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-236" class="mi">t<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.018em;"></span></span><span style="display: inline-block; width: 0px; height: 2.56em;"></span></span><span style="position: absolute; top: -2.684em; left: 0.353em;"><span style="font-size: 70.7%; font-family: STIXGeneral;" id="MathJax-Span-237" class="mn">3</span><span style="display: inline-block; width: 0px; height: 2.321em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.56em;"></span></span></span><span style="border-left: 0em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.4em; vertical-align: -0.32em;"></span></span></nobr></span><script id="MathJax-Element-13" type="math/tex">f(t)=\color{red}{a_0}+\color{blue}{a_1}t+\color{green}{a_2}t^2+\color{purple}{a_3}t^3</script>
+with one sample and two parameters.
+</div><p></p>
+<p></p><div class="graph_text" id="text2">
+<span class="firstcharacter">2</span>
+Move the slider &amp; watch 
+<span class="MathJax_Preview"></span><span style="" aria-readonly="true" role="textbox" id="MathJax-Element-14-Frame" class="MathJax"><nobr><span style="width: 1.589em; display: inline-block;" id="MathJax-Span-238" class="math"><span style="display: inline-block; position: relative; width: 1.31em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.705em, 1000em, 2.898em, -0.469em); top: -2.56em; left: 0em;"><span id="MathJax-Span-239" class="mrow"><span style="color: red;" id="MathJax-Span-240" class="mstyle"><span style="color: red;" id="MathJax-Span-241" class="mrow"><span style="color: red;" id="MathJax-Span-242" class="texatom"><span style="color: red;" id="MathJax-Span-243" class="mrow"><span style="font-family: STIXGeneral; color: red;" id="MathJax-Span-244" class="mo">|</span></span></span><span style="color: red;" id="MathJax-Span-245" class="msubsup"><span style="display: inline-block; position: relative; width: 0.908em; height: 0px;"><span style="position: absolute; clip: rect(1.94em, 1000em, 2.749em, -0.519em); top: -2.56em; left: 0em;"><span style="font-family: STIXGeneral; font-style: italic; color: red;" id="MathJax-Span-246" class="mi">a</span><span style="display: inline-block; width: 0px; height: 2.56em;"></span></span><span style="position: absolute; top: -2.171em; left: 0.476em;"><span style="font-size: 70.7%; font-family: STIXGeneral; color: red;" id="MathJax-Span-247" class="mn">0</span><span style="display: inline-block; width: 0px; height: 2.321em;"></span></span></span></span><span style="color: red;" id="MathJax-Span-248" class="texatom"><span style="color: red;" id="MathJax-Span-249" class="mrow"><span style="font-family: STIXGeneral; color: red;" id="MathJax-Span-250" class="mo">|</span></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.56em;"></span></span></span><span style="border-left: 0em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.146em; vertical-align: -0.263em;"></span></span></nobr></span><script id="MathJax-Element-14" type="math/tex">\color{red}{|a_0|}</script>, <span class="MathJax_Preview"></span><span style="" aria-readonly="true" role="textbox" id="MathJax-Element-15-Frame" class="MathJax"><nobr><span style="width: 1.589em; display: inline-block;" id="MathJax-Span-251" class="math"><span style="display: inline-block; position: relative; width: 1.31em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.705em, 1000em, 2.888em, -0.469em); top: -2.56em; left: 0em;"><span id="MathJax-Span-252" class="mrow"><span style="color: blue;" id="MathJax-Span-253" class="mstyle"><span style="color: blue;" id="MathJax-Span-254" class="mrow"><span style="color: blue;" id="MathJax-Span-255" class="texatom"><span style="color: blue;" id="MathJax-Span-256" class="mrow"><span style="font-family: STIXGeneral; color: blue;" id="MathJax-Span-257" class="mo">|</span></span></span><span style="color: blue;" id="MathJax-Span-258" class="msubsup"><span style="display: inline-block; position: relative; width: 0.908em; height: 0px;"><span style="position: absolute; clip: rect(1.94em, 1000em, 2.749em, -0.519em); top: -2.56em; left: 0em;"><span style="font-family: STIXGeneral; font-style: italic; color: blue;" id="MathJax-Span-259" class="mi">a</span><span style="display: inline-block; width: 0px; height: 2.56em;"></span></span><span style="position: absolute; top: -2.171em; left: 0.476em;"><span style="font-size: 70.7%; font-family: STIXGeneral; color: blue;" id="MathJax-Span-260" class="mn">1</span><span style="display: inline-block; width: 0px; height: 2.321em;"></span></span></span></span><span style="color: blue;" id="MathJax-Span-261" class="texatom"><span style="color: blue;" id="MathJax-Span-262" class="mrow"><span style="font-family: STIXGeneral; color: blue;" id="MathJax-Span-263" class="mo">|</span></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.56em;"></span></span></span><span style="border-left: 0em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.134em; vertical-align: -0.251em;"></span></span></nobr></span><script id="MathJax-Element-15" type="math/tex">\color{blue}{|a_1|}</script>, 
+<span class="MathJax_Preview"></span><span style="" aria-readonly="true" role="textbox" id="MathJax-Element-16-Frame" class="MathJax"><nobr><span style="width: 1.589em; display: inline-block;" id="MathJax-Span-264" class="math"><span style="display: inline-block; position: relative; width: 1.31em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.705em, 1000em, 2.888em, -0.469em); top: -2.56em; left: 0em;"><span id="MathJax-Span-265" class="mrow"><span style="color: green;" id="MathJax-Span-266" class="mstyle"><span style="color: green;" id="MathJax-Span-267" class="mrow"><span style="color: green;" id="MathJax-Span-268" class="texatom"><span style="color: green;" id="MathJax-Span-269" class="mrow"><span style="font-family: STIXGeneral; color: green;" id="MathJax-Span-270" class="mo">|</span></span></span><span style="color: green;" id="MathJax-Span-271" class="msubsup"><span style="display: inline-block; position: relative; width: 0.908em; height: 0px;"><span style="position: absolute; clip: rect(1.94em, 1000em, 2.749em, -0.519em); top: -2.56em; left: 0em;"><span style="font-family: STIXGeneral; font-style: italic; color: green;" id="MathJax-Span-272" class="mi">a</span><span style="display: inline-block; width: 0px; height: 2.56em;"></span></span><span style="position: absolute; top: -2.171em; left: 0.476em;"><span style="font-size: 70.7%; font-family: STIXGeneral; color: green;" id="MathJax-Span-273" class="mn">2</span><span style="display: inline-block; width: 0px; height: 2.321em;"></span></span></span></span><span style="color: green;" id="MathJax-Span-274" class="texatom"><span style="color: green;" id="MathJax-Span-275" class="mrow"><span style="font-family: STIXGeneral; color: green;" id="MathJax-Span-276" class="mo">|</span></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.56em;"></span></span></span><span style="border-left: 0em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.134em; vertical-align: -0.251em;"></span></span></nobr></span><script id="MathJax-Element-16" type="math/tex">\color{green}{|a_2|}</script>, and <span class="MathJax_Preview"></span><span style="" aria-readonly="true" role="textbox" id="MathJax-Element-17-Frame" class="MathJax"><nobr><span style="width: 1.589em; display: inline-block;" id="MathJax-Span-277" class="math"><span style="display: inline-block; position: relative; width: 1.31em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.705em, 1000em, 2.898em, -0.469em); top: -2.56em; left: 0em;"><span id="MathJax-Span-278" class="mrow"><span style="color: purple;" id="MathJax-Span-279" class="mstyle"><span style="color: purple;" id="MathJax-Span-280" class="mrow"><span style="color: purple;" id="MathJax-Span-281" class="texatom"><span style="color: purple;" id="MathJax-Span-282" class="mrow"><span style="font-family: STIXGeneral; color: purple;" id="MathJax-Span-283" class="mo">|</span></span></span><span style="color: purple;" id="MathJax-Span-284" class="msubsup"><span style="display: inline-block; position: relative; width: 0.908em; height: 0px;"><span style="position: absolute; clip: rect(1.94em, 1000em, 2.749em, -0.519em); top: -2.56em; left: 0em;"><span style="font-family: STIXGeneral; font-style: italic; color: purple;" id="MathJax-Span-285" class="mi">a</span><span style="display: inline-block; width: 0px; height: 2.56em;"></span></span><span style="position: absolute; top: -2.171em; left: 0.476em;"><span style="font-size: 70.7%; font-family: STIXGeneral; color: purple;" id="MathJax-Span-286" class="mn">3</span><span style="display: inline-block; width: 0px; height: 2.321em;"></span></span></span></span><span style="color: purple;" id="MathJax-Span-287" class="texatom"><span style="color: purple;" id="MathJax-Span-288" class="mrow"><span style="font-family: STIXGeneral; color: purple;" id="MathJax-Span-289" class="mo">|</span></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.56em;"></span></span></span><span style="border-left: 0em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.146em; vertical-align: -0.263em;"></span></span></nobr></span><script id="MathJax-Element-17" type="math/tex">\color{purple}{|a_3|}</script> in the bar.
+</div><p></p>
+<p></p><div class="graph_text" id="text3">
+<span class="firstcharacter">3</span>
+The slider dictates the value of the parameters of the 
+coefficients, k and l.  The k parameter determines the 
+values of the a_0 and a_2 coefficients and the l 
+coefficient determines the values of the a_1 and 
+a_3 coefficients.
+</div><p></p>
+<p></p><div class="graph_text" id="text4">
+<span class="firstcharacter">4</span>
+In practice, find <span class="MathJax_Preview"></span><span style="" aria-readonly="true" role="textbox" id="MathJax-Element-18-Frame" class="MathJax"><nobr><span style="width: 1.661em; display: inline-block;" id="MathJax-Span-290" class="math"><span style="display: inline-block; position: relative; width: 1.369em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.703em, 1000em, 2.945em, -0.683em); top: -2.56em; left: 0em;"><span id="MathJax-Span-291" class="mrow"><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-292" class="mi">f<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.146em;"></span></span><span style="font-family: STIXGeneral;" id="MathJax-Span-293" class="mo">(</span><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-294" class="mi">t<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.018em;"></span></span><span style="font-family: STIXGeneral;" id="MathJax-Span-295" class="mo">)</span></span><span style="display: inline-block; width: 0px; height: 2.56em;"></span></span></span><span style="border-left: 0em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.205em; vertical-align: -0.32em;"></span></span></nobr></span><script id="MathJax-Element-18" type="math/tex">f(t)</script> by <em>minimizing</em> the total bar height.
+</div><p></p>
+<p><input id="slider2" step="0.1" min="-1" max="3" value="-1" type="range">
+<input id="slider3" step="0.1" min="-1" max="3" value="-1" type="range"></p>
+<p></p><div id="alias_graph2"><svg height="300" width="400"><g transform="translate(80,20)"><g transform="translate(0,260)" class="axis"><g transform="translate(30,0)" style="opacity: 1;" class="tick"><line x2="0" y2="6"></line><text style="text-anchor: middle;" dy=".71em" x="0" y="9">-4</text></g><g transform="translate(90.00000000000001,0)" style="opacity: 1;" class="tick"><line x2="0" y2="6"></line><text style="text-anchor: middle;" dy=".71em" x="0" y="9">-2</text></g><g transform="translate(150,0)" style="opacity: 1;" class="tick"><line x2="0" y2="6"></line><text style="text-anchor: middle;" dy=".71em" x="0" y="9">0</text></g><g transform="translate(210.00000000000003,0)" style="opacity: 1;" class="tick"><line x2="0" y2="6"></line><text style="text-anchor: middle;" dy=".71em" x="0" y="9">2</text></g><g transform="translate(270,0)" style="opacity: 1;" class="tick"><line x2="0" y2="6"></line><text style="text-anchor: middle;" dy=".71em" x="0" y="9">4</text></g><path d="M0,6V0H300V6" class="domain"></path></g><g transform="translate(-25,0)" class="axis"><g transform="translate(0,260)" style="opacity: 1;" class="tick"><line y2="0" x2="-6"></line><text style="text-anchor: end;" dy=".32em" y="0" x="-9">-20</text></g><g transform="translate(0,195)" style="opacity: 1;" class="tick"><line y2="0" x2="-6"></line><text style="text-anchor: end;" dy=".32em" y="0" x="-9">-10</text></g><g transform="translate(0,130)" style="opacity: 1;" class="tick"><line y2="0" x2="-6"></line><text style="text-anchor: end;" dy=".32em" y="0" x="-9">0</text></g><g transform="translate(0,65)" style="opacity: 1;" class="tick"><line y2="0" x2="-6"></line><text style="text-anchor: end;" dy=".32em" y="0" x="-9">10</text></g><g transform="translate(0,0)" style="opacity: 1;" class="tick"><line y2="0" x2="-6"></line><text style="text-anchor: end;" dy=".32em" y="0" x="-9">20</text></g><path d="M-6,0H0V260H-6" class="domain"></path></g><path id="poly" d="M0,1005.0625L11.111111111111109,828.2559283391761L22.222222222222218,676.8856468780166L33.333333333333336,548.9702503429355L44.44444444444444,442.5283334603465L55.55555555555555,355.57849095666313L66.66666666666667,286.139317558299L77.77777777777777,232.22940799166796L88.88888888888889,191.86735698318347L100,163.07175925925927L111.1111111111111,143.861209546309L122.22222222222221,132.25430257074635L133.33333333333334,126.26963305898491L144.44444444444446,123.92579573743839L155.55555555555554,123.24138533252045L166.66666666666669,122.23499657064471L177.77777777777777,118.92522417822488L188.88888888888889,111.33066288167453L200,97.46990740740742L211.11111111111111,75.3615524818371L222.2222222222222,43.024192831377405L233.33333333333331,-1.5235768175581939L244.44444444444443,-60.26316173855588L255.5555555555556,-135.1759672052026L266.6666666666667,-228.24339849108372L277.77777777777777,-341.4468608697857L288.8888888888889,-476.76775961489636"></path><circle r="5" cy="188.5" cx="90.00000000000001"></circle><circle r="5" cy="77.99999999999997" cx="210.00000000000003"></circle></g></svg></div>
+<div id="func2"><table class="func2">
+<tbody><tr><td style="text-align:right;">f(t) = </td><td><span style="color: red">1</span></td></tr><tr>
+</tr><tr><td style="text-align:right;">+</td><td><span style="color: blue">0.25</span>t</td></tr><tr>
+</tr><tr><td style="text-align:right;">+</td><td><span style="color: green">-0.37</span>t<sup>2</sup></td></tr><tr>
+</tr><tr><td style="text-align:right;">+</td><td><span style="color: purple">1</span>t<sup>3</sup></td></tr><tr>
+
+</tr></tbody></table></div>
+<div id="l2_bar"><svg height="300" width="120"><g transform="translate(50,20)"><g style="fill: purple;" class="layer"><rect height="14.444444444444457" y="245.55555555555554" x="0" width="34" stroke="#000" fill-opacity="0.5"></rect></g><g style="fill: green;" class="layer"><rect height="5.416666666666657" y="240.13888888888889" x="0" width="34" stroke="#000" fill-opacity="0.5"></rect></g><g style="fill: blue;" class="layer"><rect height="3.6111111111111143" y="236.52777777777777" x="0" width="34" stroke="#000" fill-opacity="0.5"></rect></g><g style="fill: red;" class="layer"><rect height="14.444444444444429" y="222.08333333333334" x="0" width="34" stroke="#000" fill-opacity="0.5"></rect></g><g class="axis"><g transform="translate(0,260)" style="opacity: 1;" class="tick"><line y2="0" x2="0"></line><text style="text-anchor: end;" dy=".32em" y="0" x="-6">0</text></g><g transform="translate(0,187.77777777777777)" style="opacity: 1;" class="tick"><line y2="0" x2="0"></line><text style="text-anchor: end;" dy=".32em" y="0" x="-6">5</text></g><g transform="translate(0,115.55555555555554)" style="opacity: 1;" class="tick"><line y2="0" x2="0"></line><text style="text-anchor: end;" dy=".32em" y="0" x="-6">10</text></g><g transform="translate(0,43.33333333333334)" style="opacity: 1;" class="tick"><line y2="0" x2="0"></line><text style="text-anchor: end;" dy=".32em" y="0" x="-6">15</text></g><path d="M0,0H0V260H0" class="domain"></path></g></g></svg></div><p></p>
+<p> 
+</p></div>
+</div><p></p>
+<p></p><div id="end_text">
+It is important to note that after minimizing the bar height in either case,
+the absolute value of minimized terms (those whose values are closest to zero) 
+will increase regardless of the direction the user moves the slider.  <p></p>
+<p></p></div>
+</div><p></p></div></div><div style="position: absolute; width: 0px; height: 0px; overflow: hidden; padding: 0px; border: 0px none; margin: 0px;"><div style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; padding: 0px; border: 0px none; margin: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-size-adjust: none; font-family: STIXSizeOneSym,sans-serif;" id="MathJax_Font_Test"></div></div></body></html>
