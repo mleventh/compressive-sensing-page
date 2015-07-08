@@ -1,0 +1,309 @@
+
+
+
+
+
+  		<link href="http://socr.umich.edu/css/bootstrap.css" rel="stylesheet">
+  		<style type="text/css">
+		      body {
+		        top: 0px !important; 
+		        padding-top: 60px;
+		        padding-bottom: 40px;
+		      }
+		</style>
+		
+		<style type="text/css">iframe.goog-te-banner-frame{ display: none !important;}</style>
+		<style type="text/css">body {position: static !important; top:0px !important;}</style>
+		
+  	 	<link href="http://socr.umich.edu/js/bootstrap-responsive.css" rel="stylesheet">
+    	<link rel="shortcut icon" href="http://socr.umich.edu/img/SOCR_Web_Icon.ico">
+    	<link rel="alternate" type="application/rss+xml" title="SOCR News" href="http://socr.umich.edu/html/feed.rss">
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="../cs-intro-gh-pages 2/translateelement.css"><script type="text/javascript" charset="UTF-8" src="../cs-intro-gh-pages 2/js/main.js"></script><script type="text/javascript" charset="UTF-8" src="../cs-intro-gh-pages 2/js/element_main.js"></script></head>
+
+<body style="position: relative; min-height: 100%; top: 0px;">
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container-fluid"> 
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+				</a> 
+				<a class="brand" href="./SOCR_ Statistics Online Computational Resource_files/SOCR_ Statistics Online Computational Resource.html" rel="tooltip" title="Statistics Online Computational Resource">SOCR</a>
+				<div class="nav-collapse collapse">
+					<p class="navbar-text pull-right"> 
+						<a href="http://socr.umich.edu/html/feed.rss" class="btn icon rss" title="SOCR RSS News Feeds">
+							<i class="icon-bullhorn"></i>RSS</a>
+				 	</p>
+					<ul class="nav">
+				  		<!-- <li class="active"><a href="#">Home</a></li>  -->
+				  		<li class="dropdown">
+			                <a class="dropdown-toggle" id="drop5" role="button" data-toggle="dropdown" href="http://socr.umich.edu/html/SOCR_About.html" rel="tooltip" title="Learn about the SOCR Resource">About<b class="caret"></b></a>
+			                <ul id="menu3" class="dropdown-menu" role="menu" aria-labelledby="drop5">
+				                  <li><a tabindex="-1" href="http://socr.umich.edu/html/SOCR_About.html">About SOCR</a></li>
+				                  <li><a tabindex="-1" href="http://wiki.socr.umich.edu/index.php/SOCR_News">News and Events</a></li>
+				                  <li><a tabindex="-1" href="http://socr.umich.edu/people">SOCR Team</a></li>
+				                  <li><a tabindex="-1" href="http://www.socr.umich.edu/html/SOCR_UserGoogleMap.html">Geo-Map</a></li>
+				                  <li><a tabindex="-1" href="http://www.socr.umich.edu/html/SOCR_Contact.html">Contact</a></li>
+				                  <li><a tabindex="-1" href="http://wiki.socr.umich.edu/index.php/SOCR_News">News/Events</a></li>
+				                  <li><a tabindex="-1" href="http://socr.umich.edu/html/SOCR_Publications.html">Publications</a></li>
+				                  <li><a tabindex="-1" href="http://socr.umich.edu/html/SOCR_Recognitions.html">Recognitions</a></li>
+				                  <li><a tabindex="-1" href="http://www.socr.umich.edu/docs/SOCR_Brochure_UMich.pdf">Brochure</a></li>
+				                  <li class="divider"></li>
+				                  <li><a tabindex="-1" href="http://socr.umich.edu/html/SOCR_Funding.html">Funding</a></li>
+				                  <li><a tabindex="-1" href="http://www.socr.umich.edu/html/SOCR_Support.html">Donations</a></li>
+				                  <li><a tabindex="-1" href="http://socr.umich.edu/html/SOCR_Acknowledgments.html">Acknowledgments</a></li>
+				                  <li><a tabindex="-1" href="http://socr.umich.edu/html/SOCR_CitingLicense.html">Citing/Licences</a></li>
+				                  <li class="divider"></li>
+				                  <li><a tabindex="-1" href="http://wiki.socr.umich.edu/">SOCR Wiki</a></li>
+				                  <li><a tabindex="-1" href="http://wiki.socr.umich.edu/index.php/SOCR_Servers">SOCR Servers</a></li>
+				                  <li><a tabindex="-1" href="http://www.socr.umich.edu/docs/SOCR_Documentation.html">Documentation</a></li>
+				                  <li><a tabindex="-1" href="http://socr.umich.edu/html/SOCR_Download.html">Download</a></li>
+				                  <li><a tabindex="-1" href="http://www.socr.umich.edu/html/SOCR_Languages.html">Language Translation</a></li>
+				                  <li class="divider"></li>
+				                  <li><a tabindex="-1" href="http://socr.umich.edu/html/Navigators.html" rel="tooltip" title="SOCR Resource Graphical Navigator">
+				                  	SOCR Resource Navigator</a></li>
+				                  
+			                </ul>
+			            </li>
+				  		<li><a href="http://socr.umich.edu/html/SOCR_Contact.html" rel="tooltip" title="Contact the SOCR Resource">Contact</a></li>
+				  		<li class="dropdown">
+			                <a class="dropdown-toggle" id="drop5" role="button" data-toggle="dropdown" href="http://socr.umich.edu/index.html#" rel="tooltip" title="Use these tools if your browser is Java/JVM 1.6+ enabled!">
+			                	Java Applets<b class="caret"></b></a>
+			                <ul id="menu3" class="dropdown-menu" role="menu" aria-labelledby="drop5">
+				                  <li><a tabindex="-1" href="http://socr.umich.edu/html/dist/">Distributions</a></li>
+				                  <li><a tabindex="-1" href="http://socr.umich.edu/html/exp">Experiments</a></li>
+				                  <li><a tabindex="-1" href="http://socr.umich.edu/html/mod">Modeler</a></li>
+				                  <li><a tabindex="-1" href="http://socr.umich.edu/html/ana">Analyses</a></li>
+				                  <li><a tabindex="-1" href="http://socr.umich.edu/html/cha">Charts</a></li>
+				                  <li><a tabindex="-1" href="http://socr.umich.edu/html/gam">Games</a></li>
+				                  <li><a tabindex="-1" href="http://socr.ucla.edu/webstart/index.html">Web-Start</a></li>
+				                  <li class="divider"></li>
+				                  <li><a tabindex="-1" href="http://socr.ucla.edu/legacy/htmls/" rel="tooltip" title="For older Java/JVM 1.5 enabled Browsers Use the links below!">Legacy Java 1.5 Applets</a></li>
+				            </ul>
+			            </li>
+			            <li class="dropdown">
+			                <a class="dropdown-toggle" id="drop5" role="button" data-toggle="dropdown" href="http://socr.umich.edu/index.html#" rel="tooltip" title="A collection of portable modern HTML5 Webapps">Webapps<b class="caret"></b></a>
+			                <ul id="menu3" class="dropdown-menu" role="menu" aria-labelledby="drop5">
+				                  <li><a tabindex="-1" href="http://socr.umich.edu/HTML5/MotionChart/">Motion Charts</a></li> <li><a tabindex="-1" href="http://www.distributome.org/V3">Distributome Navigator</a></li>
+				                  <li><a tabindex="-1" href="http://www.distributome.org/tools.html">Distributome Webapps</a></li>
+				                  <li><a tabindex="-1" href="http://socr.umich.edu/HTML5/BivariateNormal/">Bivariate Normal Distribution Calculator</a></li>
+				                  <li><a tabindex="-1" href="http://socr.umich.edu/HTML5/charts/ViolinChart/">Violin Chart</a></li>
+				                  <li><a tabindex="-1" href="http://socr.umich.edu/HTML5/Resampling_Webapp/">Randomization and Resampling Webapp</a></li>
+				                  <li><a tabindex="-1" href="http://socr.umich.edu/Applets/index.html#Tables">Probability Tables</a></li>
+				                  <li><a tabindex="-1" href="http://socr.umich.edu/HTML5/">Other SOCR HTML5 Webapps</a></li>
+			                </ul>
+			            </li>
+			            <li class="dropdown">
+			                <a class="dropdown-toggle" id="drop5" role="button" data-toggle="dropdown" href="http://socr.umich.edu/index.html#" rel="tooltip" title="Additional SOCR Resources">More<b class="caret"></b></a>
+			                <ul id="menu3" class="dropdown-menu" role="menu" aria-labelledby="drop5">
+				                  <li><a tabindex="-1" href="http://socr.umich.edu/Applets/index.html#High-Precision_Distribution_Calculators">High-Precision Calculators</a></li>
+				                  <li><a tabindex="-1" href="http://socr.umich.edu/Applets/index.html#Tables">Probability Tables</a></li>
+				                  <li><a tabindex="-1" href="http://socr.umich.edu/Applets/index.html#Function_and_Image-Processing_Tools">Function and Image-Processing Applets</a></li>
+				                  <li><a tabindex="-1" href="http://socr.umich.edu/Applets/index.html#Other_Interesting_Java_Applets">Other Java Applets</a></li>
+				            </ul>
+			            </li>
+			            <li> <a href="http://nursing.umich.edu/" rel="tooltip" title="University of Michigan School of Nursing">UMSN</a>
+			            </li>
+			            <li><div id="google_translate_element"><div class="skiptranslate goog-te-gadget" dir="ltr"><div id=":0.targetLanguage" class="goog-te-gadget-simple" style="white-space: nowrap;"><img src="../cs-intro-gh-pages 2/cleardot.gif" class="goog-te-gadget-icon" style="background-image: url(https://translate.googleapis.com/translate_static/img/te_ctrl3.gif); background-position: -65px 0px;"><span style="vertical-align: middle;"><a class="goog-te-menu-value" href="javascript:void(0)"><span>Select Language</span><img src="../cs-intro-gh-pages 2/cleardot.gif" width="1" height="1"><span style="border-left-width: 1px; border-left-style: solid; border-left-color: rgb(187, 187, 187);">​</span><img src="../cs-intro-gh-pages 2/cleardot.gif" width="1" height="1"><span style="color: rgb(155, 155, 155);">▼</span></a></span></div></div></div>
+								<script type="text/javascript">
+									function googleTranslateElementInit() {
+								  		new google.translate.TranslateElement({pageLanguage: 'en', 
+									  		layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false,
+									  		gaTrack: true, gaId: 'UA-676559-1'}, 'google_translate_element');
+								}
+								</script>
+								<script type="text/javascript" src="../cs-intro-gh-pages 2/js/element.js">
+								</script>  
+			            </li>
+					</ul>
+				</div>
+ 
+			</div>
+		</div>
+	</div>
+ 
+  <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="js/numeric-1.2.6.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
+  <script type="text/javascript" src="node_module/MathLib.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript" src="js/dropdown.js"></script>
+  <script type="text/javascript" src="js/pmain.js"></script>
+  <script type="text/javascript" src="js/arrays.js"></script>
+  <script type="text/javascript" src="js/iopctrl.js"></script>
+  <script type="text/javascript" src="js/combnk.js"></script>
+  <script type="text/javascript" src="js/mainCopy.js"></script>
+  <script type="text/javascript" src="js/main2.js"></script>
+
+  <div id="text">
+    <h4>
+  Introduction to Compressive Sensing
+   </h4>
+  <div id="left_col">
+
+  [http://en.wikipedia.org/wiki/Digital_signal, Digital signals] behave as functions
+  and can be defined using a finite number of points with integer values.  Such points
+  are referred to as samples.  Parametrizing the function and its associated samples
+  allows one to determine all of the digital signals of a given degree that pass through
+  the given, fixed samples.
+   
+  The number of samples required to accurately define such signals depends on the 
+  degrees of freedom stipulated by the parameterization of the function: the number
+  of samples needed is the difference between degree of the associated polynomial
+  and the number of parameters.  From here, recovering the original signal to determine
+  the fewest samples necessary is done by minimizing the parameterized function. 
+  Such an approach is referred to as 
+  [http://en.wikipedia.org/wiki/Compressive_sensing, Compressive Sensing].
+   
+  Use the menu below to select the number of samples to test
+   
+  </div>
+   
+  <div id="right_col">
+   
+  Consider a cubic function. Four samples uniquely define a cubic.  Hence,
+  one can determine the original polynomial using either two samples with 
+  two parameters, or three samples with one parameter.
+   
+   
+  Given any cubic function, it can exist as __either__ 
+  a constant ($f(t)=a_0$), a line ($f(t)=a_1t$), a parabola 
+  ($f(t)=a_2t^2$), or a third-degree function ($f(t)=a_3t^3$). 
+  The samples and parameters help to determine which is true
+  for all third-degree functions that pass through the given
+  samples.
+   
+  Below, we see that we can recover $f(t)=a_0+a_1 t +a_2 t^2 + a_3 t^3$ 
+  from *three* samples given a single parameter, k, dictated by the slider.
+  The original signal, upon minimizing the absolute values of the coefficients 
+  of the function, becomes apparent: zero coefficients increase the clarity of 
+  the signal.  Likewise, we can recover $f(t)=a_0+a_1 t +a_2 t^2 + a_3 t^3$ 
+  from *two* samples given two parameters, k and l.  
+   
+  </div>
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    
+    
+  <div class="container">
+    <div class="dropdown">
+      <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">3 Samples
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+        <li id = "3samples" role="presentation"><a role="menuitem" tabindex="-1" href="#3samples">3 samples</a></li>
+        
+        <li id = "2samples" role="presentation"><a role="menuitem" tabindex="-1" href="#2samples">2 samples</a></li>
+        <div>
+    </div>
+    </ul>
+  </div>
+
+
+  <div id = "graph1">
+  <div id="graph_container">
+   
+  <div class="graph_text" id="text1">
+  <span class="firstcharacter" id="first_step">1</span>
+  With too few samples with repsect to the parameter, a signal has 
+  [http://en.wikipedia.org/wiki/Aliasing aliases].
+  E.g., 
+  $f(t)=\color{red}{a_0}+\color{blue}{a_1}t+\color{green}{a_2}t^2+\color{purple}{a_3}t^3$
+  with two samples and one parameter.
+  </div>
+   
+  <div class="graph_text" id="text2">
+  <span class="firstcharacter">2</span>
+  Move the slider & watch 
+  $\color{red}{|a_0|}$, $\color{blue}{|a_1|}$, 
+  $\color{green}{|a_2|}$, and $\color{purple}{|a_3|}$ in the bar.
+  </div>
+   
+  <div class="graph_text" id="text3">
+  <span class="firstcharacter">3</span>
+  The slider dictates the value of the parameter of the 
+  coefficients, k.
+  </div>
+   
+  <div class="graph_text" id="text4">
+  <span class="firstcharacter">4</span>
+  In practice, find $f(t)$ by __minimizing__ the total bar height.
+  </div>
+   
+  <input type="range" id="slider" step="0.1" min="-1" max="3" value="-1">
+   
+   
+  <div id ="func"></div>
+  <div id="alias_graph"></div>
+  <div id="l1_bar"></div>
+  </div>
+
+  </div>
+  <div id="graph2">
+
+  <div id="graph_container2">
+
+   
+  <div class="graph_text" id="text1">
+  <span class="firstcharacter" id="first_step">1</span>
+  With too few samples with repsect to the parameter, a signal has 
+  [http://en.wikipedia.org/wiki/Aliasing aliases].
+  E.g., 
+  $f(t)=\color{red}{a_0}+\color{blue}{a_1}t+\color{green}{a_2}t^2+\color{purple}{a_3}t^3$
+  with one sample and two parameters.
+  </div>
+   
+  <div class="graph_text" id="text2">
+  <span class="firstcharacter">2</span>
+  Move the slider & watch 
+  $\color{red}{|a_0|}$, $\color{blue}{|a_1|}$, 
+  $\color{green}{|a_2|}$, and $\color{purple}{|a_3|}$ in the bar.
+  </div>
+   
+  <div class="graph_text" id="text3">
+  <span class="firstcharacter">3</span>
+  The slider dictates the value of the parameters of the 
+  coefficients, k and l.  The l parameter (slider 1) determines 
+  the values of the a_1 and a_3 coefficients and the k 
+  coefficient determines the values of the a_0 and 
+  a_2 coefficients (slider 2).
+  </div>
+   
+  <div class="graph_text" id="text4">
+  <span class="firstcharacter">4</span>
+  In practice, find $f(t)$ by __minimizing__ the total bar height.
+  </div>
+   
+  <input type="range" id="slider2" step="0.1" min="-1" max="3" value="-1">
+  <input type="range" id="slider3" step="0.1" min="-1" max="3" value="-1">
+   
+  <div id="alias_graph2"></div>
+  <div id ="func2"></div>
+  <div id="l2_bar"></div>
+
+   
+  </div>
+  </div>
+
+  <div id="end_text">
+  It is important to note that after minimizing the bar height in either case,
+  the absolute value of minimized terms (those whose values are closest to zero) 
+  will increase regardless of the direction the user moves the slider.  
+
+  </div>
+  </div>
+<script src="../cs-intro-gh-pages 2/jquery.js"></script>
+	<script src="../cs-intro-gh-pages 2/bootstrap-transition.js"></script>
+	<script src="../cs-intro-gh-pages 2/bootstrap-alert.js"></script>
+	<script src="../cs-intro-gh-pages 2/bootstrap-modal.js"></script>
+	<script src="../cs-intro-gh-pages 2/bootstrap-dropdown.js"></script>
+	<script src="../cs-intro-gh-pages 2/bootstrap-scrollspy.js"></script>
+	<script src="../cs-intro-gh-pages 2/bootstrap-tab.js"></script>
+	<script src="../cs-intro-gh-pages 2/bootstrap-tooltip.js"></script>
+	<script src="../cs-intro-gh-pages 2/bootstrap-popover.js"></script>
+	<script src="../cs-intro-gh-pages 2/bootstrap-button.js"></script>
+	<script src="../cs-intro-gh-pages 2/bootstrap-collapse.js"></script>
+	<script src="../cs-intro-gh-pages 2/bootstrap-carousel.js"></script>
+	<script src="../cs-intro-gh-pages 2/bootstrap-typeahead.js"></script>
+</body>
+</html>
